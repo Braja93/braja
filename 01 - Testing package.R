@@ -1,3 +1,4 @@
+library("devtools")
 install_github("nladwa/nladwa")
 
 library("nladwa")
