@@ -1,0 +1,12 @@
+Package: nladwa
+Title: General data manipulation functions
+Version: 1.0
+Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
+Description: What the package does (one paragraph).
+Depends: R (>= 3.2.2)
+License: What license is it under?
+LazyData: true
+Imports:
+    data.table,
+    lubridate,
+    reshape2
