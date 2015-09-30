@@ -4,6 +4,7 @@
 #' @param lm.object A lm() saved to a variable
 #' @param date.index The date index of the lm(data = ?) variable, as a character, e.g. "Week"
 #' @keywords lm contribution
+#' @import data.table
 #' @export
 #' @examples
 #' lm.contribution()
@@ -17,14 +18,13 @@ lm.contribution <- function(lm.object, date.index) {
   out <- out[complete.cases(out),] # only complete cases
   
   coeffs <- data.table::data.table(var = names(lm.object$coefficients), coeff = lm.object$coefficients) # table of coefficients from regression
-  coeffs <- data.table::data.table(coeffs)
   
   if(coeffs$var[1] == "(Intercept)") { # if the regression has an intercept then create a placeholder
-    data.table::data.table(out[, "(Intercept)" := 1])
+    out[, "(Intercept)" := 1]
   }
   
   for (i in 1:nrow(coeffs)) { # loop over coeffs table and times the independents by coefficients
-    data.table::data.table(out[, coeffs$var[i] := get(coeffs$var[i]) * coeffs$coeff[i]])
+    out[, coeffs$var[i] := get(coeffs$var[i]) * coeffs$coeff[i]]
   }
   
   return(out)
