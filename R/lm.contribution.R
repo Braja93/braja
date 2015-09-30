@@ -16,7 +16,7 @@ lm.contribution <- function(lm.object, date.index) {
   out <- get(data.source)[, out.cols, with = FALSE] # cut data source to appropriate cols for output
   out <- out[complete.cases(out)] # only complete cases
   
-  coeffs <- data.table(var = names(lm.object$coefficients), coeff = lm.object$coefficients) # table of coefficients from regression
+  coeffs <- data.table::data.table(var = names(lm.object$coefficients), coeff = lm.object$coefficients) # table of coefficients from regression
   
   if(coeffs$var[1] == "(Intercept)") { # if the regression has an intercept then create a placeholder
     out[, "(Intercept)" := 1]
