@@ -4,17 +4,18 @@
 \alias{lm.contribution.ggplot}
 \title{Plots the contribution of a lm's independent variables}
 \usage{
-lm.contribution.ggplot(lm.contribution.object, date.index, dependent.var)
+lm.contribution.ggplot(lm.contribution.object, date.index = NULL,
+  dependent.var = NULL)
 }
 \arguments{
-\item{date.index}{The date index of the lm(data = ?) variable, as a character, e.g. "Week"}
+\item{date.index}{Only define if error. The date index of the lm(data = ?) variable, as a character, e.g. "Week".}
 
-\item{dependent.var}{The dependent variable of the lm}
+\item{dependent.var}{Only define if error. The dependent variable of the lm.}
 
-\item{lm.contibution.object}{The output of lm.contribution()}
+\item{lm.contibution.object}{The output of lm.contribution.}
 }
 \description{
-Takes lm.contribution() output and visualises it.
+Takes lm.contribution output and visualises it.
 }
 \examples{
 lm.contribution.ggplot()
