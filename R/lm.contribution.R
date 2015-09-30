@@ -20,11 +20,11 @@ lm.contribution <- function(lm.object, date.index) {
   coeffs <- data.table::data.table(coeffs)
   
   if(coeffs$var[1] == "(Intercept)") { # if the regression has an intercept then create a placeholder
-    out[, "(Intercept)" := 1]
+    data.table::data.table(out[, "(Intercept)" := 1])
   }
   
   for (i in 1:nrow(coeffs)) { # loop over coeffs table and times the independents by coefficients
-    out[, coeffs$var[i] := get(coeffs$var[i]) * coeffs$coeff[i]]
+    data.table::data.table(out[, coeffs$var[i] := get(coeffs$var[i]) * coeffs$coeff[i]])
   }
   
   return(out)
