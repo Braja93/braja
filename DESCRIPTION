@@ -1,8 +1,8 @@
 Package: nladwa
 Title: General data manipulation functions
-Version: 1.0
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Version: 1.1
+Authors@R: person("n", "nladwa", email = "", role = c("aut", "cre"))
+Description: General functions.
 Depends: R (>= 3.2.2)
 License: What license is it under?
 LazyData: true
