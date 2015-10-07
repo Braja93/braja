@@ -27,5 +27,16 @@ lm.contribution <- function(lm.object, date.index) {
     out[, coeffs$var[i] := get(coeffs$var[i]) * coeffs$coeff[i]]
   }
   
+  # reorder columns so the intercept is plotted first as a straight line
+  
+  if ("(Intercept)" %in% names(out)) {
+    ncol.lm.object <- ncol(out)
+    ncol.intercept <- which(names(out) == "(Intercept)")
+    
+    data.table::setcolorder(out, 
+                            c(names(out)[1:2], names(out)[ncol.intercept], names(out)[3:(ncol.lm.object-1)])
+    )
+  }
+  
   return(out)
 }
