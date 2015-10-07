@@ -1,7 +1,7 @@
 Package: nladwa
 Title: General data manipulation functions
 Version: 1.1
-Authors@R: person("n", "nladwa", email = "", role = c("aut", "cre"))
+Authors@R: person("n", "nladwa", email = "no.thanks@internet.com", role = c("aut", "cre"))
 Description: General functions.
 Depends: R (>= 3.2.2)
 License: What license is it under?

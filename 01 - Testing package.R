@@ -1,5 +1,15 @@
 library("devtools")
-install_github("nladwa/nladwa")
+
+# ways to install
+
+install_github("nladwa/nladwa") # from github
+
+setwd("..") # from local
+install("nladwa")
+
+remove.packages("nladwa")
+
+### testing package
 
 library("nladwa")
 
