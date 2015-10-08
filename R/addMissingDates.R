@@ -7,8 +7,7 @@
 #' @keywords missing dates
 #' @import data.table
 #' @export
-#' @examples
-#' addMissingDates()
+#' @example inst/examples/addMissingDates.R
 
 addMissingDates <- function(x, date.index, seq.by = 1) {
 

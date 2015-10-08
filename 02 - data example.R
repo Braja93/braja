@@ -67,14 +67,16 @@ lm.x <- lm(TotalGrossLeads ~ Search.Spend + Competitor.Spend, data = x)
 
 # addMissingDates
 
-x <- structure(list(Date = structure(c(16436, 16437, 16439, 16440), class = "Date"), 
+x <- structure(list(Date = structure(c(16436, 16437, 16439, 16445), class = "Date"), 
                     Guardian = c(0L, 0L, 20L, 0L), Metro = c(10L, 10L, 0L, 10L
                     ), Telegraph = c(0L, 0L, 0L, 5L), Times = c(15L, 0L, 0L, 
                                                                 12L)), .Names = c("Date", "Guardian", "Metro", "Telegraph", 
                                                                                   "Times"), row.names = c(NA, -4L), class = c("data.table", "data.frame"
                                                                                   ), sorted = "Date")
 
-addMissingDates(x = x, date.index = "Date")
+print(x) # missing 2015-01-03, 05, 06, 07, 08, 09
+
+addMissingDates(x = x, date.index = "Date") # now has them all
 
 # wideToLong
 
