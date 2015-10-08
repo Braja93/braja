@@ -2,12 +2,16 @@
 % Please edit documentation in R/wideToLong.R
 \name{wideToLong}
 \alias{wideToLong}
-\title{Coverts data from wide to long}
+\title{Converts data from wide to long}
 \usage{
-wideToLong(id.vars)
+wideToLong(x, id.vars, writeToClipboard)
 }
 \arguments{
-\item{id.vars}{A vector, or individual column from the source data that will be the id of the output.}
+\item{x}{data.frame or data.table. In wide format.}
+
+\item{id.vars}{Character. Column name from the source data that will be the id of the output.}
+
+\item{writeToClipboard}{Logical. TRUE or FALSE.}
 }
 \description{
 Reads data from clipboard, and melts the data.frame based on the id.vars entered.

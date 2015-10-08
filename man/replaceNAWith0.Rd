@@ -7,7 +7,7 @@
 replaceNAWith0(x)
 }
 \arguments{
-\item{x}{A data.table}
+\item{x}{data.table.}
 }
 \description{
 Replaces all NAs with 0

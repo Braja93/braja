@@ -1,7 +1,7 @@
 #' Prints the unique values of any character columns
 #'
 #' Prints the unique values of any character columns
-#' @param x A data.table
+#' @param x data.table.
 #' @keywords unique character
 #' @export
 #' @examples

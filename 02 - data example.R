@@ -1,3 +1,5 @@
+# lm.contribution, lm.contribution.ggplot
+
 x <- structure(list(Week = structure(c(16069, 16076, 16083, 16090, 
                                   16097, 16104, 16111, 16118, 16125, 16132, 16139, 16146, 16153, 
                                   16160, 16167, 16174, 16181, 16188, 16195, 16202, 16209, 16216, 
@@ -62,3 +64,24 @@ x <- structure(list(Week = structure(c(16069, 16076, 16083, 16090,
                                                                                                                                                                                                                                                               NA, NA, NA, NA, NA, NA, NA, NA, NA)), .Names = c("Week", "TotalGrossLeads", "TotalMediaSpend", "Search.Spend", "Competitor.Spend"), row.names = c(NA, -105L), class = c("data.table", "data.frame"), sorted = "Week")
 
 lm.x <- lm(TotalGrossLeads ~ Search.Spend + Competitor.Spend, data = x)
+
+# addMissingDates
+
+x <- structure(list(Date = structure(c(16436, 16437, 16439, 16440), class = "Date"), 
+                    Guardian = c(0L, 0L, 20L, 0L), Metro = c(10L, 10L, 0L, 10L
+                    ), Telegraph = c(0L, 0L, 0L, 5L), Times = c(15L, 0L, 0L, 
+                                                                12L)), .Names = c("Date", "Guardian", "Metro", "Telegraph", 
+                                                                                  "Times"), row.names = c(NA, -4L), class = c("data.table", "data.frame"
+                                                                                  ), sorted = "Date")
+
+addMissingDates(x = x, date.index = "Date")
+
+# wideToLong
+
+x <- structure(list(Date = c("01/01/2015", "02/01/2015", "03/01/2015", 
+                             "04/01/2015", "05/01/2015"), Guardian = c(0L, 0L, 0L, 20L, 0L
+                             ), Metro = c(10L, 10L, 0L, 0L, 10L), Telegraph = c(0L, 0L, 0L, 
+                                                                                0L, 5L), Times = c(15L, 0L, 0L, 0L, 12L)), .Names = c("Date", 
+                                                                                                                                      "Guardian", "Metro", "Telegraph", "Times"), row.names = c(NA, 
+                                                                                                                                                                                                -5L), class = c("data.table", "data.frame"))
+wideToLong(x = x, id.vars = "Date", writeToClipboard = FALSE)

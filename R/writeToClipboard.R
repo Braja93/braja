@@ -1,7 +1,7 @@
 #' Writes a data.table or data.frame to the clipboard
 #'
 #' Writes a data.table or data.frame to the clipboard.
-#' @param x A data.table or data.frame
+#' @param x A data.table or data.frame.
 #' @keywords clipboard write
 #' @export
 #' @examples

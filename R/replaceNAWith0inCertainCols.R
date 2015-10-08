@@ -1,8 +1,8 @@
 #' Replaces NAs with 0 in certain columns
 #'
 #' Replaces all NAs with 0 in a column that has "string" in its name
-#' @param x A data.table
-#' @param string A character string that the column name has
+#' @param x data.table.
+#' @param string Character. A string that is in the target column name.
 #' @keywords NA
 #' @export
 #' @examples

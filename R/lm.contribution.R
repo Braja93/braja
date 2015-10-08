@@ -1,8 +1,8 @@
 #' Outputs the contribution of each lm independent variable
 #'
 #' Takes a lm and applies coefficients to show how each independent variable contributes to the dependent variable. IMPORTANT: lm(data = ?) has to be a data.table.
-#' @param lm.object A lm() saved to a variable
-#' @param date.index The date index of the lm(data = ?) variable, as a character, e.g. "Week"
+#' @param lm.object lm object. A lm saved to a variable.
+#' @param date.index Character. The date index of the lm(data = ?) variable.
 #' @keywords lm contribution
 #' @import data.table
 #' @export

@@ -7,9 +7,9 @@
 getWeek(Date, order = "Mon-Sun")
 }
 \arguments{
-\item{Date}{Date class object}
+\item{order}{Character. "Mon-Sun" or "Sun-Mon".}
 
-\item{order}{"Mon-Sun" or "Sun-Mon"}
+\item{Date.}{Date class object.}
 }
 \description{
 Gets week from a date, has to be Date class

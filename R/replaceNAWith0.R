@@ -1,7 +1,7 @@
 #' Replaces all NAs with 0
 #'
 #' Replaces all NAs with 0
-#' @param x A data.table
+#' @param x data.table.
 #' @keywords NA
 #' @export
 #' @examples

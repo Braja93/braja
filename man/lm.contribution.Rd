@@ -7,9 +7,9 @@
 lm.contribution(lm.object, date.index)
 }
 \arguments{
-\item{lm.object}{A lm() saved to a variable}
+\item{lm.object}{lm object. A lm saved to a variable.}
 
-\item{date.index}{The date index of the lm(data = ?) variable, as a character, e.g. "Week"}
+\item{date.index}{Character. The date index of the lm(data = ?) variable.}
 }
 \description{
 Takes a lm and applies coefficients to show how each independent variable contributes to the dependent variable. IMPORTANT: lm(data = ?) has to be a data.table.

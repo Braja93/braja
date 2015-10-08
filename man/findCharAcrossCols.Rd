@@ -9,7 +9,7 @@ findCharAcrossCols(x, string)
 \arguments{
 \item{x}{A data.table or data.frame}
 
-\item{string}{A character string that you want to find in x}
+\item{string}{Character. String that you want to find in x.}
 }
 \description{
 Searches each column for a particular string

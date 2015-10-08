@@ -8,9 +8,9 @@ lm.contribution.ggplot(lm.contribution.object, date.index = NULL,
   dependent.var = NULL)
 }
 \arguments{
-\item{date.index}{Only define if error. The date index of the lm(data = ?) variable, as a character, e.g. "Week".}
+\item{date.index}{Character. Only define if error. The date index of the lm(data = ?) variable, as a character, e.g. "Week".}
 
-\item{dependent.var}{Only define if error. The dependent variable of the lm.}
+\item{dependent.var}{Character. Only define if error. The dependent variable of the lm.}
 
 \item{lm.contibution.object}{The output of lm.contribution.}
 }

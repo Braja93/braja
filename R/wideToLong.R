@@ -1,14 +1,19 @@
-#' Coverts data from wide to long
+#' Converts data from wide to long
 #'
 #' Reads data from clipboard, and melts the data.frame based on the id.vars entered.
-#' @param id.vars A vector, or individual column from the source data that will be the id of the output.
+#' @param x data.frame or data.table. In wide format.
+#' @param id.vars Character. Column name from the source data that will be the id of the output.
+#' @param writeToClipboard Logical. TRUE or FALSE.
 #' @keywords wide long reshape
 #' @export
 #' @examples
 #' wideToLong()
 
-wideToLong <- function(id.vars) {
-  x <- readExcelClipboard()
+wideToLong <- function(x, id.vars, writeToClipboard) {
   xm <- reshape2::melt(x, id.vars = id.vars)
-  writeToClipboard(xm)
+  if (writeToClipboard == TRUE) {
+    writeToClipboard(xm)
+  } else if (writeToClipboard == FALSE) {
+    return(xm)
+  }
 }

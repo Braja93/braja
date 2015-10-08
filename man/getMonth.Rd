@@ -7,7 +7,7 @@
 getMonth(Date)
 }
 \arguments{
-\item{Date}{Date class object}
+\item{Date.}{Date class object.}
 }
 \description{
 Gets month from a date, has to be Date class

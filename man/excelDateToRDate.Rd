@@ -7,7 +7,7 @@
 excelDateToRDate(Date)
 }
 \arguments{
-\item{Date}{Date, as character in dd/mm/yyyy}
+\item{Date}{Character. In dd/mm/yyyy format.}
 }
 \description{
 dd/mm/yyyy to yyyy-mm-dd

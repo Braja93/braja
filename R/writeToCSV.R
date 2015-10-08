@@ -1,8 +1,8 @@
 #' Writes a data.table or data.frame to a CSV
 #'
 #' Writes a data.table or data.frame to a CSV, with a filename manually entered.
-#' @param x A data.table or data.frame
-#' @param filename A character string that the output will be called, e.g. "output"
+#' @param x data.table or data.frame.
+#' @param filename Character. A string that the CSV will be called, e.g. "output" will save as "output.csv".
 #' @keywords CSV write
 #' @export
 #' @examples

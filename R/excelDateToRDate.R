@@ -1,7 +1,7 @@
 #' Excel date to R date class
 #'
 #' dd/mm/yyyy to yyyy-mm-dd
-#' @param Date Date, as character in dd/mm/yyyy
+#' @param Date Character. In dd/mm/yyyy format.
 #' @keywords excel date
 #' @export
 #' @examples

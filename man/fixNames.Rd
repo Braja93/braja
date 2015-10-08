@@ -7,7 +7,7 @@
 fixNames(x)
 }
 \arguments{
-\item{x}{A data.table with weird column names}
+\item{x}{data.table. With weird column names.}
 }
 \description{
 Replaces and weird characters or spaces with dots

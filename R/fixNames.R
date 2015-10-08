@@ -1,7 +1,7 @@
 #' Fixes column names
 #'
 #' Replaces and weird characters or spaces with dots
-#' @param x A data.table with weird column names
+#' @param x data.table. With weird column names.
 #' @keywords names
 #' @export
 #' @examples

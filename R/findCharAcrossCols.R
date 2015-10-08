@@ -2,7 +2,7 @@
 #'
 #' Searches each column for a particular string
 #' @param x A data.table or data.frame
-#' @param string A character string that you want to find in x
+#' @param string Character. String that you want to find in x.
 #' @keywords unique character
 #' @export
 #' @examples

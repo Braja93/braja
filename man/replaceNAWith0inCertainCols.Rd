@@ -7,9 +7,9 @@
 replaceNAWith0inCertainCols(x, string)
 }
 \arguments{
-\item{x}{A data.table}
+\item{x}{data.table.}
 
-\item{string}{A character string that the column name has}
+\item{string}{Character. A string that is in the target column name.}
 }
 \description{
 Replaces all NAs with 0 in a column that has "string" in its name

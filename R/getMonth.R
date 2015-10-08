@@ -1,7 +1,7 @@
 #' Gets month from a date
 #'
 #' Gets month from a date, has to be Date class
-#' @param Date Date class object
+#' @param Date. Date class object.
 #' @keywords month
 #' @export
 #' @examples

@@ -7,7 +7,7 @@
 uniqueCharCols(x)
 }
 \arguments{
-\item{x}{A data.table}
+\item{x}{data.table.}
 }
 \description{
 Prints the unique values of any character columns

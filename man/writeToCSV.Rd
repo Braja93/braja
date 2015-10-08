@@ -7,9 +7,9 @@
 writeToCSV(x, filename)
 }
 \arguments{
-\item{x}{A data.table or data.frame}
+\item{x}{data.table or data.frame.}
 
-\item{filename}{A character string that the output will be called, e.g. "output"}
+\item{filename}{Character. A string that the CSV will be called, e.g. "output" will save as "output.csv".}
 }
 \description{
 Writes a data.table or data.frame to a CSV, with a filename manually entered.

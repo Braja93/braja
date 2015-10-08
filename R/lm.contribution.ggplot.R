@@ -2,8 +2,8 @@
 #'
 #' Takes lm.contribution output and visualises it.
 #' @param lm.contibution.object The output of lm.contribution.
-#' @param date.index Only define if error. The date index of the lm(data = ?) variable, as a character, e.g. "Week".
-#' @param dependent.var Only define if error. The dependent variable of the lm.
+#' @param date.index Character. Only define if error. The date index of the lm(data = ?) variable, as a character, e.g. "Week".
+#' @param dependent.var Character. Only define if error. The dependent variable of the lm.
 #' @keywords lm contribution ggplot
 #' @export
 #' @examples

@@ -7,7 +7,7 @@
 writeToClipboard(x)
 }
 \arguments{
-\item{x}{A data.table or data.frame}
+\item{x}{A data.table or data.frame.}
 }
 \description{
 Writes a data.table or data.frame to the clipboard.
