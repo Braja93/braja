@@ -15,7 +15,7 @@ addMissingDates <- function(x, date.index, seq.by = 1) {
   tomerge.date <- seq(from = min(x.dates), to = max(x.dates), by = 1)
   tomerge.date <- tomerge.date[!(tomerge.date %in% x.dates)]
   
-  tomerge <- as.data.table(matrix(nrow = length(tomerge.date), ncol = ncol(x), dimnames = list(NULL, names(x)), data = 0))
+  tomerge <- data.table::as.data.table(matrix(nrow = length(tomerge.date), ncol = ncol(x), dimnames = list(NULL, names(x)), data = 0))
   tomerge[, Date := tomerge.date]
   
   out <- rbindlist(list(x, tomerge))
