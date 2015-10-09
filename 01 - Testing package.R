@@ -15,6 +15,4 @@ library("ggplot2")
 out <- lm.contribution(lm.x, date.index = "Week")
 lm.contribution.ggplot(out)
 
-run_examples(pkg = "nladwa") # use when testing examples from local?
-
-example("addMissingDates") # use when you've installed from github
+run_examples(pkg = "nladwa")
