@@ -87,3 +87,10 @@ x <- structure(list(Date = c("01/01/2015", "02/01/2015", "03/01/2015",
                                                                                                                                       "Guardian", "Metro", "Telegraph", "Times"), row.names = c(NA, 
                                                                                                                                                                                                 -5L), class = c("data.table", "data.frame"))
 wideToLong(x = x, id.vars = "Date", writeToClipboard = FALSE)
+
+# replaceNAWithinCertainCols. adapt for replaceNAWith
+
+x <- data.table(a = 1:5, b.a = c(100, rep(NA, 4)), b = c(rep(NA, 4), "100"))
+x
+replaceNAWithinCertainCols(x = x, replacement = 0, string = ".a")
+x
