@@ -16,7 +16,7 @@ lm.contribution.ggplot <- function(lm.contribution.object, date.index = NULL, de
   m.out <- reshape2::melt(lm.contribution.object, id.vars = date.index)
   
   lm.plot <- ggplot2::ggplot() +
-    ggplot2::geom_area(data = m.out[variable != dependent.var], ggplot2::aes_string(x = date.index, y = "value", fill = "variable")) +
-    ggplot2::geom_line(data = m.out[variable == dependent.var], ggplot2::aes_string(x = date.index, y = "value", fill = "variable"))
+    ggplot2::geom_area(data = m.out[variable != dependent.var], ggplot2::aes_string(x = date.index, y = "value", fill = "variable", group = "variable")) +
+    ggplot2::geom_line(data = m.out[variable == dependent.var], ggplot2::aes_string(x = date.index, y = "value", fill = "variable", group = "variable"))
   print(lm.plot)
 }

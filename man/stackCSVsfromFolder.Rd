@@ -16,8 +16,6 @@ Reads all CSVs from a folder (pre-set the working directory), and stacks them by
 list.files(path = paste0(.libPaths(), "/nladwa/extdata/stack"))
 setwd(paste0(.libPaths(), "/nladwa/extdata/stack"))
 stackCSVsfromFolder()
-
-
 }
 \keyword{csv}
 \keyword{stack}
