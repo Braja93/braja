@@ -12,9 +12,6 @@ writeToClipboard(x)
 \description{
 Writes a data.table or data.frame to the clipboard.
 }
-\examples{
-writeToClipboard()
-}
 \keyword{clipboard}
 \keyword{write}
 

@@ -4,8 +4,6 @@
 #' @param No arguments
 #' @keywords excel
 #' @export
-#' @examples
-#' readExcelClipboard()
 
 readExcelClipboard <- function() {
   return(read.table("clipboard", header = TRUE, sep = "\t", stringsAsFactors = FALSE, row.names = NULL))

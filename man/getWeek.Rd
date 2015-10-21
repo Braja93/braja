@@ -15,7 +15,9 @@ getWeek(Date, order = "Mon-Sun")
 Gets week from a date, has to be Date class
 }
 \examples{
-getWeek()
+x <- as.Date("2015-01-12")
+getWeek(x, order = "Mon-Sun")
+getWeek(x, order = "Sun-Mon")
 }
 \keyword{week}
 

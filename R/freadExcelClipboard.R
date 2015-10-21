@@ -4,8 +4,6 @@
 #' @param No arguments
 #' @keywords excel
 #' @export
-#' @examples
-#' freadExcelClipboard()
 
 freadExcelClipboard <- function(...) {
   x <- tempfile()

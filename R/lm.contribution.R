@@ -6,8 +6,7 @@
 #' @keywords lm contribution
 #' @import data.table
 #' @export
-#' @examples
-#' lm.contribution()
+#' @example inst/examples/lm.contribution.R
 
 lm.contribution <- function(lm.object, date.index) {
   data.source <- as.character(lm.object$call[3]) # data source of the regression

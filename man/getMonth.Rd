@@ -13,7 +13,8 @@ getMonth(Date)
 Gets month from a date, has to be Date class
 }
 \examples{
-getMonth()
+x <- as.Date("2015-01-12")
+getMonth(x)
 }
 \keyword{month}
 

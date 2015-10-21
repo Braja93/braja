@@ -5,8 +5,6 @@
 #' @param filename Character. A string that the CSV will be called, e.g. "output" will save as "output.csv".
 #' @keywords CSV write
 #' @export
-#' @examples
-#' writeToCSV()
 
 writeToCSV <- function(x, filename) {
   write.csv(x, paste0(filename, ".csv"), row.names = FALSE)

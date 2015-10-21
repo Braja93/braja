@@ -14,9 +14,6 @@ writeToCSV(x, filename)
 \description{
 Writes a data.table or data.frame to a CSV, with a filename manually entered.
 }
-\examples{
-writeToCSV()
-}
 \keyword{CSV}
 \keyword{write}
 

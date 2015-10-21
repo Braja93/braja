@@ -15,7 +15,9 @@ findCharAcrossCols(x, string)
 Searches each column for a particular string
 }
 \examples{
-findCharAcrossCols()
+x <- iris
+findCharAcrossCols(x, "virg")
+x[findCharAcrossCols(x, "virg")$Species, ]
 }
 \keyword{character}
 \keyword{unique}

@@ -5,8 +5,7 @@
 #' @param string Character. A string that is in the target column name.
 #' @keywords NA
 #' @export
-#' @examples
-#' replaceNAWithinCertainCols()
+#' @example inst/examples/replaceNAWithinCertainCols.R
 
 replaceNAWithinCertainCols <- function(x, replacement, string) {
   for (col in grep(string, x = names(x), value = TRUE))

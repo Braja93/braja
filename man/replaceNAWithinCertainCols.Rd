@@ -15,7 +15,10 @@ replaceNAWithinCertainCols(x, replacement, string)
 Replaces all NAs with a specified replacement in a column that has "string" in its name
 }
 \examples{
-replaceNAWithinCertainCols()
+x <- data.table::fread(system.file("extdata", "NA.csv", package = "nladwa"))
+print(x)
+replaceNAWithinCertainCols(x = x, replacement = "space", string = ".a")
+print(x)
 }
 \keyword{NA}
 

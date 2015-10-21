@@ -6,8 +6,7 @@
 #' @param writeToClipboard Logical. TRUE or FALSE.
 #' @keywords wide long reshape
 #' @export
-#' @examples
-#' wideToLong()
+#' @example inst/examples/wideToLong.R
 
 wideToLong <- function(x, id.vars, writeToClipboard) {
   xm <- reshape2::melt(x, id.vars = id.vars)

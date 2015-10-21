@@ -4,8 +4,7 @@
 #' @param x data.table.
 #' @keywords unique character
 #' @export
-#' @examples
-#' uniqueCharCols()
+#' @example inst/examples/uniqueCharCols.R
 
 uniqueCharCols <- function(x) {
   sapply(X = x[, sapply(x, class) == "character", with = FALSE], FUN = unique)

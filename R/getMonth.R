@@ -4,8 +4,7 @@
 #' @param Date. Date class object.
 #' @keywords month
 #' @export
-#' @examples
-#' getMonth()
+#' @example inst/examples/getMonth.R
 
 getMonth <- function(Date) {
   Month <- format(Date, "%b-%Y")

@@ -14,6 +14,7 @@ install_github("nladwa/nladwa") # from github
 
 setwd("..") # from local
 install("nladwa")
+library("nladwa")
 
 ### delete package from local
 

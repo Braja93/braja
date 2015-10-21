@@ -6,8 +6,7 @@
 #' @param dependent.var Character. Only define if error. The dependent variable of the lm.
 #' @keywords lm contribution ggplot
 #' @export
-#' @examples
-#' lm.contribution.ggplot()
+#' @example inst/examples/lm.contribution.ggplot.R
 
 lm.contribution.ggplot <- function(lm.contribution.object, date.index = NULL, dependent.var = NULL) {
   

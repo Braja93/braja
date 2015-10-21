@@ -4,8 +4,7 @@
 #' @param No arguments
 #' @keywords stack csv
 #' @export
-#' @examples
-#' stackCSVsfromFolder()
+#' @example inst/examples/stackCSVsfromFolder.R
 
 stackCSVsfromFolder <- function() { # make sure wd is set...
   all.files <- list.files(pattern = "\\.csv$") # vector of files in wd ending in csv

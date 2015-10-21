@@ -13,7 +13,10 @@ excelDateToRDate(Date)
 dd/mm/yyyy to yyyy-mm-dd
 }
 \examples{
-excelDateToRDate()
+x <- "31/01/2015"
+print(x); class(x)
+x <- excelDateToRDate(x)
+print(x); class(x)
 }
 \keyword{date}
 \keyword{excel}

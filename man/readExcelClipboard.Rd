@@ -12,8 +12,5 @@ readExcelClipboard()
 \description{
 Create data.frame from Excel table that's held in the clipboard.
 }
-\examples{
-readExcelClipboard()
-}
 \keyword{excel}
 

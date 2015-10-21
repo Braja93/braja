@@ -13,7 +13,10 @@ uniqueCharCols(x)
 Prints the unique values of any character columns
 }
 \examples{
-uniqueCharCols()
+x <- data.table::data.table(iris)
+iris$Species <- as.character(iris$Species)
+print(x)
+uniqueCharCols(x)
 }
 \keyword{character}
 \keyword{unique}

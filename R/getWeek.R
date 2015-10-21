@@ -5,8 +5,7 @@
 #' @param order Character. "Mon-Sun" or "Sun-Mon".
 #' @keywords week
 #' @export
-#' @examples
-#' getWeek()
+#' @example inst/examples/getWeek.R
 
 getWeek <- function(Date, order = "Mon-Sun") {
   if (class(Date) != "Date") stop("Date needs to be of Date class")

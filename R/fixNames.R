@@ -4,8 +4,7 @@
 #' @param x data.table. With weird column names.
 #' @keywords names
 #' @export
-#' @examples
-#' fixNames()
+#' @example inst/examples/fixNames.R
 
 fixNames <- function(x) {
   data.table::setnames(x, names(x), make.names(names(x)))

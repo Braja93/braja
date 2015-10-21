@@ -13,6 +13,8 @@ stackCSVsfromFolder()
 Reads all CSVs from a folder (pre-set the working directory), and stacks them by row
 }
 \examples{
+list.files(path = "stack/")
+setwd("stack/")
 stackCSVsfromFolder()
 }
 \keyword{csv}

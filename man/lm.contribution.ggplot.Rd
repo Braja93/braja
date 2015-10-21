@@ -18,7 +18,10 @@ lm.contribution.ggplot(lm.contribution.object, date.index = NULL,
 Takes lm.contribution output and visualises it.
 }
 \examples{
-lm.contribution.ggplot()
+x <- data.table::fread(system.file("extdata", "lm.csv", package = "nladwa"))
+lm.x <- lm(TotalGrossLeads ~ Search.Spend + Competitor.Spend, data = x)
+lm.object <- lm.contribution(lm.object = lm.x, date.index = "Week")
+lm.contribution.ggplot(lm.object)
 }
 \keyword{contribution}
 \keyword{ggplot}

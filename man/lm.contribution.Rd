@@ -15,7 +15,10 @@ lm.contribution(lm.object, date.index)
 Takes a lm and applies coefficients to show how each independent variable contributes to the dependent variable. IMPORTANT: lm(data = ?) has to be a data.table.
 }
 \examples{
-lm.contribution()
+x <- data.table::fread(system.file("extdata", "lm.csv", package = "nladwa"))
+lm.x <- lm(TotalGrossLeads ~ Search.Spend + Competitor.Spend, data = x)
+lm.object <- lm.contribution(lm.object = lm.x, date.index = "Week")
+print(lm.object)
 }
 \keyword{contribution}
 \keyword{lm}

@@ -13,7 +13,10 @@ fixNames(x)
 Replaces and weird characters or spaces with dots
 }
 \examples{
-fixNames()
+x <- data.table::fread(system.file("extdata", "Newspapers.csv", package = "nladwa"))
+names(x)
+fixNames(x)
+names(x)
 }
 \keyword{names}
 

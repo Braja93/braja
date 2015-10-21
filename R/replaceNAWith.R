@@ -4,8 +4,7 @@
 #' @param x data.table.
 #' @keywords NA
 #' @export
-#' @examples
-#' replaceNAWith()
+#' @example inst/examples/replaceNAWith.R
 
 replaceNAWith <- function(x, replacement) {
   for(j in names(x))

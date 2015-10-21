@@ -14,6 +14,6 @@ wideToLong(id.vars = "ID")
 out <- lm.contribution(lm.x, date.index = "Week")
 lm.contribution.ggplot(out)
 
-devtools::run_examples(pkg = "nladwa") # use when testing examples from local?
+devtools::run_examples(pkg = "nladwa", fresh = TRUE) # use when testing examples from local?
 
-example("addMissingDates") # use when you've installed from github
+example("lm.contribution") # use when you've installed from github

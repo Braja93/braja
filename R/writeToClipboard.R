@@ -4,8 +4,6 @@
 #' @param x A data.table or data.frame.
 #' @keywords clipboard write
 #' @export
-#' @examples
-#' writeToClipboard()
 
 writeToClipboard <- function(x) {
   write.table(x, "clipboard-128", sep = "\t", row.names = FALSE)
