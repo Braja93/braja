@@ -3,7 +3,13 @@ Title: General data manipulation functions
 Version: 1.1
 Authors@R: person("n", "ladwa", email = "no.thanks@internet.com", role = c("aut", "cre"))
 Description: General functions.
-Depends: R (>= 3.2.2)
+Depends:
+    R (>= 3.2.2)
 License: What license is it under?
 LazyData: true
-Imports: data.table, lubridate, reshape2, ggplot2
+Imports:
+    data.table,
+    lubridate,
+    reshape2,
+    ggplot2
+RoxygenNote: 5.0.1
