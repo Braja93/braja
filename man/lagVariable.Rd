@@ -15,7 +15,7 @@ lagVariable(variable, lag.amount)
 Lags a variable, adding NAs at the front.
 }
 \examples{
-print(1:10); print(lag.variable(variable = 1:10, lag.amount = 3))
+print(1:10); print(lagVariable(variable = 1:10, lag.amount = 3))
 }
 \keyword{lag}
 

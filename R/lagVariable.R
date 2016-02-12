@@ -4,6 +4,7 @@
 #' @param variable A vector, or column of a data.frame/table
 #' @param lag.amount Periods to lag the variable by.
 #' @keywords lag
+#' @export
 #' @example inst/examples/lagVariable.R
 
 lagVariable <- function(variable, lag.amount) {
