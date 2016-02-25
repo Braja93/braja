@@ -1,4 +1,4 @@
 x <- data.table::data.table(iris)
-iris$Species <- as.character(iris$Species)
+x[, Species := as.character(Species)]
 print(x)
 uniqueCharCols(x)
