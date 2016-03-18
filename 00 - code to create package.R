@@ -1,5 +1,5 @@
-library("devtools")
-library("roxygen2")
+library(devtools)
+library(roxygen2)
 
 ### building package
 
@@ -14,7 +14,7 @@ install_github("nladwa/nladwa") # from github
 
 setwd("..") # from local
 install("nladwa")
-library("nladwa")
+library(nladwa)
 
 ### delete package from local
 
