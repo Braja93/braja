@@ -9,6 +9,8 @@
 #' @export
 #' @example inst/examples/adstock.R
 
+# adapted from: http://stackoverflow.com/questions/14372880/simple-examples-of-filter-function-recursive-option-specifically
+
 adstock <- function(data, variable, adstock.rates) {
   
   adstocked <- data.table(matrix(nrow = nrow(data), ncol = length(adstock.rates), dimnames = list(NULL, as.character(adstock.rates))))

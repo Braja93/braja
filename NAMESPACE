@@ -2,6 +2,7 @@
 
 export(addMissingDates)
 export(adstock)
+export(adstock.maxDecay)
 export(excelDateToRDate)
 export(findCharAcrossCols)
 export(fixNames)
