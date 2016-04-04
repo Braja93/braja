@@ -1,6 +1,6 @@
 #' Adstocks a variable - infinite decay.
 #'
-#' User sets adstock rates.
+#' User sets adstock rates, which append to the end of the original data.table.
 #' @param data data.table that holds the variable to be transformed
 #' @param variable Character string of the variable to be transformed
 #' @param adstock.rates One (or many) rates to adstock the variable

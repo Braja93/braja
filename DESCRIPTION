@@ -11,5 +11,6 @@ Imports:
     data.table,
     lubridate,
     reshape2,
-    ggplot2
+    ggplot2,
+    minpack.lm
 RoxygenNote: 5.0.1
