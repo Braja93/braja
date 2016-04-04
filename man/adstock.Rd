@@ -14,7 +14,7 @@ adstock(data, variable, adstock.rates)
 \item{adstock.rates}{One (or many) rates to adstock the variable}
 }
 \description{
-User sets adstock rates.
+User sets adstock rates, which append to the end of the original data.table.
 }
 \examples{
 x <- data.table::fread(system.file("extdata", "TVRs.csv", package = "nladwa"))

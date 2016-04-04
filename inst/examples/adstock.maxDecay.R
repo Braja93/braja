@@ -4,8 +4,8 @@ x[, Week := as.Date(Week, "%d/%m/%Y")]
 out1 <- adstock.maxDecay(data = x, variable = "TVRs", adstock.rates = 0.5, max.decay = 2)
 out2 <- adstock.maxDecay(data = x, variable = "TVRs", adstock.rates = 0.5, max.decay = 10)
 
-setkey(out1, Week)
-setkey(out2, Week)
+data.table::setkey(out1, Week)
+data.table::setkey(out2, Week)
 
 out <- out1[out2]
 out[, i.TVRs := NULL]
