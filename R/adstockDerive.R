@@ -16,7 +16,7 @@ adstockDerive <- function(data, y, x){
          call. = FALSE)
   }
   
-  opt.formula <- as.formula(paste0(y, " ~ b0 + b1 * adstockSimple(", x, ", rate)"))
+  opt.formula <- as.formula(paste0(y, " ~ b0 + b1 * adstock(", x, ", rate)"))
   
   rate <- 0
   
