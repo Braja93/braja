@@ -21,7 +21,7 @@ x <- data.table::fread(system.file("extdata", "Model.csv", package = "nladwa"))
 
 opt.rate <- adstockDerive(data = x, y = "Sales", x = "Media")
 
-x[, Adstock.Media := adstockSimple(x = Media, adstock.rate = opt.rate)]
+x[, Adstock.Media := adstock(x = Media, adstock.rate = opt.rate)]
 
 xm <- data.table::melt(x, id.vars = "Week")
 

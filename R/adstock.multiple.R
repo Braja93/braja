@@ -16,7 +16,7 @@ adstock.multiple <- function(data, variable, adstock.rates) {
   adstocked <- data.table(matrix(nrow = nrow(data), ncol = length(adstock.rates), dimnames = list(NULL, as.character(adstock.rates))))
   
   for (i in 1:length(adstock.rates)) {
-    adstocked[, i := as.numeric(filter(x = data[, get(variable)], filter = adstock.rates[i], method = "recursive")), with = FALSE]
+    adstocked[, i := adstock(x = data[, get(variable)], adstock.rate = adstock.rates[i]), with = FALSE]
   }
   
   setnames(adstocked, names(adstocked), paste(variable, names(adstocked), sep = ":"))
