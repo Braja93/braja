@@ -1,6 +1,6 @@
 #' Adstocks a variable - infinite decay.
 #'
-#' User sets adstock rates, which append to the end of the original data.table.
+#' User sets adstock rates, which appends to the input variable in a new table.
 #' @param data data.table that holds the variable to be transformed
 #' @param variable Character string of the variable to be transformed
 #' @param adstock.rates One (or many) rates to adstock the variable
@@ -11,17 +11,17 @@
 
 # adapted from: http://stackoverflow.com/questions/14372880/simple-examples-of-filter-function-recursive-option-specifically
 
-adstock.multiple <- function(data, variable, adstock.rates) {
+adstock.multiple2 <- function(data, variable, adstock.rates) {
   
-  adstocked <- data.table(matrix(nrow = nrow(data), ncol = length(adstock.rates), dimnames = list(NULL, as.character(adstock.rates))))
+  adstocked <- sapply(adstock.rates, function(adstock.rate) { adstock(x = data[, get(variable)], adstock.rate = adstock.rate)})
   
-  for (i in 1:length(adstock.rates)) {
-    adstocked[, i := adstock(x = data[, get(variable)], adstock.rate = adstock.rates[i]), with = FALSE]
-  }
+  adstocked <- as.data.table(adstocked)
   
-  setnames(adstocked, names(adstocked), paste(variable, names(adstocked), sep = ":"))
+  setnames(adstocked, names(adstocked), paste(variable, as.character(adstock.rates), sep = ":"))
   
-  out <- cbind(data, adstocked)
+  out <- cbind(data[, .(variable = get(variable))], adstocked)
+  
+  setnames(out, "variable", variable)
   
   return(out)
 }
