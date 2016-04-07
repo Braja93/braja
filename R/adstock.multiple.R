@@ -11,7 +11,7 @@
 
 # adapted from: http://stackoverflow.com/questions/14372880/simple-examples-of-filter-function-recursive-option-specifically
 
-adstock.multiple2 <- function(data, variable, adstock.rates) {
+adstock.multiple <- function(data, variable, adstock.rates) {
   
   adstocked <- sapply(adstock.rates, function(adstock.rate) { adstock(x = data[, get(variable)], adstock.rate = adstock.rate)})
   
