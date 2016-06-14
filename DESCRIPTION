@@ -12,5 +12,6 @@ Imports:
     lubridate,
     reshape2,
     ggplot2,
-    minpack.lm
+    minpack.lm,
+    cairoDevice
 RoxygenNote: 5.0.1
