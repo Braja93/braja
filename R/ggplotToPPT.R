@@ -6,6 +6,7 @@
 #' @param units Character. Unit of measurement for dimensions; "in", "cm", or "mm". See "ggsave" documentation.
 #' @keywords ggplot PPT
 #' @import cairoDevice
+#' @import ggplot2
 #' @export
 
 ggplotToPPT <- function(filename = NULL, plot = plot.obj, units = "cm", width = 43.2, height = 13.7, font.size = 17) {

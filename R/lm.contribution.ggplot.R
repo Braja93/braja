@@ -5,6 +5,7 @@
 #' @param date.index Character. Only define if error. The date index of the lm(data = ?) variable, as a character, e.g. "Week".
 #' @param dependent.var Character. Only define if error. The dependent variable of the lm.
 #' @keywords lm contribution ggplot
+#' @import ggplot2
 #' @export
 #' @example inst/examples/lm.contribution.ggplot.R
 

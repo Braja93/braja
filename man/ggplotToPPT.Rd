@@ -4,7 +4,7 @@
 \alias{ggplotToPPT}
 \title{Exports a graph for presentations}
 \usage{
-ggplotToPPT(filename = filename, plot = plot.obj, units = "cm",
+ggplotToPPT(filename = NULL, plot = plot.obj, units = "cm",
   width = 43.2, height = 13.7, font.size = 17)
 }
 \arguments{

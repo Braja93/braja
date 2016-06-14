@@ -4,6 +4,7 @@
 #' @param lm.contribution.object lm.contribution object. Output of lm.contribtion saved as an object.
 #' @keywords lm actual fitted ggplot
 #' @import data.table
+#' @import ggplot2
 #' @export
 
 lm.actualvfitted.ggplot <- function(lm.actualvfitted.object) {
