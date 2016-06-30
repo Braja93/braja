@@ -15,13 +15,9 @@ adstock.multiple <- function(data, variable, adstock.rates) {
   
   adstocked <- sapply(adstock.rates, function(adstock.rate) { adstock(x = data[, get(variable)], adstock.rate = adstock.rate)})
   
-  adstocked <- as.data.table(adstocked)
+  out <- as.data.table(adstocked)
   
-  setnames(adstocked, names(adstocked), paste(variable, as.character(adstock.rates), sep = ":"))
-  
-  out <- cbind(data[, .(variable = get(variable))], adstocked)
-  
-  setnames(out, "variable", variable)
+  setnames(out, names(out), paste(variable, as.character(adstock.rates), sep = "."))
   
   return(out)
 }
