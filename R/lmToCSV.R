@@ -13,18 +13,12 @@ lmToCSV <- function(lm.object, filename){
   if(file.exists(filename)) {stop("File already exists, choose another filename")}
   
   # coefficients in dataframe
-  lmTable <- data.frame(summary(lm.object)$coefficients)
-  
-  # grab the coefficients
-  colnames(lmTable) <- colnames(summary(lm.object)$coefficients)
-  # get the p-vals 
-  lmTable[ ,4] <- ifelse(lmTable[ ,4] < .001, "< 0.001", 
-                         ifelse(lmTable[ ,4] < .01, "< 0.01", 
-                                round(lmTable[ ,4], 3)))
-  
+  out <- data.table::data.table(summary(lm.object)$coefficients)
+  out[, Variable := row.names(summary(lm1)$coefficients)]
   
   # format the table
-  out <- format(lmTable)
+  out[, `Pr(>|t|)` := ifelse(test = `Pr(>|t|)` < 0.001, yes = "< 0.001", no = ifelse(test = `Pr(>|t|)` < 0.01, yes = "< 0.01", no = round(`Pr(>|t|)`, 3)))]
+  out <- out[, c("Variable", "Estimate", "Std. Error", "t value", "Pr(>|t|)"), with = FALSE]
   
   # write it as a csv file 
   write.csv(out, filename)
