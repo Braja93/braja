@@ -8,7 +8,7 @@
 
 lmToCSV <- function(lm.object, filename){
   
-  filename <- paste0(filename,"_Summary.csv")
+  filename <- paste0(filename,"_Summary")
   
   if(file.exists(filename)) {stop("File already exists, choose another filename")}
   
