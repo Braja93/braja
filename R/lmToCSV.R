@@ -18,6 +18,7 @@ lmToCSV <- function(lm.object, filename){
   
   # format the table
   out[, `Pr(>|t|)` := ifelse(test = `Pr(>|t|)` < 0.001, yes = "< 0.001", no = ifelse(test = `Pr(>|t|)` < 0.01, yes = "< 0.01", no = round(`Pr(>|t|)`, 3)))]
+  out[Variable == "(Intercept)", Variable := "Intercept"]
   out <- out[, c("Variable", "Estimate", "Std. Error", "t value", "Pr(>|t|)"), with = FALSE]
   
   # write it as a csv file 

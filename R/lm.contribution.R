@@ -28,7 +28,7 @@ lm.contribution <- function(lm.object, date.index) {
   
   # reorder columns so the intercept is plotted first as a straight line
   
-  if ("(Intercept)" %in% names(out)) {
+  if("(Intercept)" %in% names(out)) {
     ncol.lm.object <- ncol(out)
     ncol.intercept <- which(names(out) == "(Intercept)")
     
@@ -36,6 +36,10 @@ lm.contribution <- function(lm.object, date.index) {
                             c(names(out)[1:2], names(out)[ncol.intercept], names(out)[3:(ncol.lm.object-1)])
     )
   }
+  
+  if("(Intercept)" %in% names(out)) {
+    setnames(out, "(Intercept)", "Intercept")
+    }
   
   return(out)
 }
