@@ -21,5 +21,5 @@ lmToCSV <- function(lm.object, filename){
   out <- out[, c("Variable", "Estimate", "Std. Error", "t value", "Pr(>|t|)"), with = FALSE]
   
   # write it as a csv file 
-  write.csv(out, filename)
+  writeToCSV(out, filename)
 }
