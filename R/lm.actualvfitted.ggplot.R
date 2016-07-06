@@ -8,6 +8,7 @@
 #' @export
 
 lm.actualvfitted.ggplot <- function(lm.actualvfitted.object) {
+  
   id.var <- names(lm.actualvfitted.object)[1]
   
   options(warn = -1)

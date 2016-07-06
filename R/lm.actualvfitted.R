@@ -8,8 +8,8 @@
 
 lm.actualvfitted <- function(lm.contribution.object) {
   ncols <- ncol(lm.contribution.object)
-  estimate <- rowSums(lm.contribution.object[, 3:ncols, with = FALSE], na.rm = TRUE)
+  fitted <- rowSums(lm.contribution.object[, 3:ncols, with = FALSE], na.rm = TRUE)
   out <- lm.contribution.object[, 1:2, with = FALSE]
-  out[, estimate := estimate]
+  out[, fitted := fitted]
   return(out)
 }
