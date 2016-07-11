@@ -10,7 +10,7 @@
 #' @example inst/examples/addMissingDates.R
 
 addMissingDates <- function(x, date.index, seq.by = 1) {
-
+  
   x.dates <- x[, get(date.index)]
   tomerge.date <- seq(from = min(x.dates), to = max(x.dates), by = seq.by)
   tomerge.date <- tomerge.date[!(tomerge.date %in% x.dates)]
@@ -19,6 +19,7 @@ addMissingDates <- function(x, date.index, seq.by = 1) {
   tomerge[, date.index := tomerge.date, with = FALSE]
   
   out <- data.table::rbindlist(list(x, tomerge))
-  setkeyv(out, date.index)
+  out <- out[, lapply(.SD, sum, na.rm = TRUE), by = date.index]
+  data.table::setkeyv(out, date.index)
   return(out)
 }
