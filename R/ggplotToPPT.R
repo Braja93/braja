@@ -9,13 +9,13 @@
 #' @import ggplot2
 #' @export
 
-ggplotToPPT <- function(filename = NULL, plot = plot.obj, units = "cm", width = 43.2, height = 13.7, font.size = 17) {
-  if(is.null(filename)) {stop("filename must be defined")}
-  ggplot2::ggsave(filename = paste0(filename, ".png"),
-                  plot = get(plot) + ggplot2::theme_gray(base_size = font.size),
-                  units = "cm",
-                  width = width,
-                  height = height,
-                  type = "cairo-png")
+ggplotToPPT <- function(filename = NULL, plot, units = "cm", width = 43.2, height = 13.7, font.size = 17) {
   
+  if(is.null(filename)) {
+    stop("filename must be defined")
+  }
+  
+  ggplot2::ggsave(filename = paste0(filename, ".png"), plot = plot + 
+                    ggplot2::theme_gray(base_size = font.size), units = "cm", 
+                  width = width, height = height, type = "cairo-png")
 }
