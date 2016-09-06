@@ -4,8 +4,8 @@
 \alias{ggplotToPPT}
 \title{Exports a graph for presentations}
 \usage{
-ggplotToPPT(filename = NULL, plot = plot.obj, units = "cm",
-  width = 43.2, height = 13.7, font.size = 17)
+ggplotToPPT(filename = NULL, plot, units = "cm", width = 43.2,
+  height = 13.7, font.size = 17)
 }
 \arguments{
 \item{filename}{Character. Filename of image to be created.}
