@@ -20,7 +20,7 @@ addMissingDates <- function(x, date.index, start.date = NULL, end.date = NULL, d
   end.date <- as.Date(end.date)
   
   x <- data.table::rbindlist(list(x, x[NA], x[NA]))
-  x[(nrow(x) - 1):nrow(x), Week := c(start.date, end.date)]
+  x[(nrow(x) - 1):nrow(x), eval(date.index) := c(start.date, end.date)]
   x.dates <- x[, get(date.index)]
   tomerge.date <- seq(from = start.date, to = end.date, by = data.frequency)
   tomerge.date <- tomerge.date[!(tomerge.date %in% x.dates)]
@@ -29,6 +29,5 @@ addMissingDates <- function(x, date.index, start.date = NULL, end.date = NULL, d
   out <- data.table::rbindlist(list(x, tomerge))
   out <- out[, lapply(.SD, sum, na.rm = TRUE), by = date.index]
   data.table::setkeyv(out, date.index)
-  
   return(out)
 }
