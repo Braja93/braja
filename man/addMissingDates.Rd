@@ -4,14 +4,19 @@
 \alias{addMissingDates}
 \title{Adds missing dates to wide data}
 \usage{
-addMissingDates(x, date.index, seq.by = 1)
+addMissingDates(x, date.index, start.date = NULL, end.date = NULL,
+  data.frequency = 7)
 }
 \arguments{
 \item{x}{data.table. In wide format.}
 
 \item{date.index}{Character. The column in x that is the date variable.}
 
-\item{seq.by}{Integer. Number of days that each row should cover? 1 = week day, 7 = one week.}
+\item{start.date}{Character in "yyyy-mm-dd" format. The first date of the required output, if NULL, function takes the min of date.index.}
+
+\item{end.date}{Character in "yyyy-mm-dd" format. The last date of the required output, if NULL, function takes the max of date.index.}
+
+\item{data.frequency}{Integer. Number of days that each row should cover, 1 = one day, 7 = one week.}
 }
 \description{
 Adds rows with 0 values to a wide table that doesn't have consecutive dates
@@ -20,7 +25,8 @@ Adds rows with 0 values to a wide table that doesn't have consecutive dates
 x <- data.table::fread(system.file("extdata", "Newspapers.csv", package = "nladwa"))
 x$Date <- as.Date(x$Date)
 print(x) # missing 2015-01-03, 05, 06, 07, 08, 09
-addMissingDates(x = x, date.index = "Date") # now has them all
+addMissingDates(x = x, date.index = "Date", data.frequency = 1) # now has them all
+addMissingDates(x = x, date.index = "Date", data.frequency = 1, start.date = "2014-12-01")
 }
 \keyword{dates}
 \keyword{missing}
