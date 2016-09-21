@@ -9,7 +9,7 @@
 #' @import ggplot2
 #' @export
 
-vars.ggplot <- function(x, date.index, vars) {
+varsPlot <- function(x, date.index, vars) {
   
   vars <- c(date.index, vars)
   
