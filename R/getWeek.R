@@ -1,7 +1,7 @@
 #' Gets week from a date
 #'
 #' Gets week from a date, has to be Date class
-#' @param Date. Date class object.
+#' @param Date Date class object.
 #' @param order Character. "Mon-Sun" or "Sun-Mon".
 #' @keywords week
 #' @export

@@ -2,8 +2,8 @@
 #'
 #' Takes a lm.actualvfitted object and plots.
 #' @param lm.avf.object lm.avf object. Output of lm.avf saved as an object.
-#' @param tolerance. Numeric between 0 and 1, e.g. if abs.resid/dep.var > 0.2 then it is highlighted.
-#' @param graph. Logical. If TRUE then plots the variable with shades for gaps.
+#' @param tolerance Numeric between 0 and 1, e.g. if abs.resid/dep.var > 0.2 then it is highlighted.
+#' @param graph Logical. If TRUE then plots the variable with shades for gaps.
 #' @keywords lm actual fitted ggplot gaps
 #' @import data.table
 #' @import ggplot2
