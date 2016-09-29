@@ -9,7 +9,7 @@
 #' @import ggplot2
 #' @export
 
-lm.actualvfitted.gaps <- function(lm.avf.object, tolerance = 0.2, graph = TRUE) {
+lm.actualvfitted.gaps <- function(lm.avf.object, tolerance = 0.2, graph = TRUE, ...) {
   
   out <- copy(lm.avf.object)
   
@@ -22,7 +22,7 @@ lm.actualvfitted.gaps <- function(lm.avf.object, tolerance = 0.2, graph = TRUE) 
   out[, pc := ifelse(abs.resid.div.dep.var >= tolerance, 1, 0)]
   
   out.plot <- ggplot2::ggplot() +
-    geom_shade(data = out, variable = "pc", date.index = date.index) +
+    geom_shade(data = out, variable = "pc", date.index = date.index, ...) +
     ggplot2::geom_line(data = out, ggplot2::aes_string(x = date.index, y = dep.var)) +
     ggplot2::geom_line(data = out, ggplot2::aes_string(x = date.index, y = "fitted"), linetype = "dashed", colour = "blue")
   
