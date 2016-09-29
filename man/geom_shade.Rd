@@ -10,15 +10,15 @@ geom_shade(data, variable, date.index, alpha = 0.2, overlap = 3.5,
 \arguments{
 \item{data}{data.table that holds the data}
 
+\item{variable}{Numeric. Dummy variable, 1 = plot.}
+
 \item{date.index}{Character. Date index of x, e.g. "Week", need to be of Date class.}
 
-\item{variable.}{Numeric. Dummy variable, 1 = plot.}
+\item{alpha}{Transparency of bar shades. 1 = opaque, 0 = transparent.}
 
-\item{alpha.}{Transparency of bar shades. 1 = opaque, 0 = transparent.}
+\item{overlap}{Numeric. Overlap of the bars, seems to be OK left as 3.5.}
 
-\item{overlap.}{Numeric. Overlap of the bars, seems to be OK left as 3.5.}
-
-\item{fill.}{Character. Colour for the bars.}
+\item{fill}{Character. Colour for the bars.}
 }
 \description{
 Plots "recession bars" on a graph. Note - only really good for plotting one variable.
