@@ -4,7 +4,8 @@
 \alias{lm.multiVariableTesting}
 \title{Tests multiple variables, returning a summary table}
 \usage{
-lm.multiVariableTesting(data, formula.to.test, test.variables)
+lm.multiVariableTesting(data, formula.to.test, test.variables,
+  sort.var = "Pr(>|t|)")
 }
 \arguments{
 \item{data}{data.table. Where all the variables are stored.}
@@ -12,6 +13,10 @@ lm.multiVariableTesting(data, formula.to.test, test.variables)
 \item{formula.to.test}{Character. Formula, not including the variables you want to test, e.g. "y ~ x1 + x2 + x3"}
 
 \item{test.variables}{Character. List of variable to tack on the end of formula.to.test, individually tested.}
+
+\item{sort.var}{Character. Column name to sort by.}
+
+\item{decreasing}{Logical. Default is Low to High. Set to TRUE for High to Low.}
 }
 \description{
 Takes a formula, a list of variables to test, and the data.table they are stored in, and returns a summary table of that formula, with all the variables tested individually.
