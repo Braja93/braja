@@ -4,7 +4,7 @@
 \alias{adstockDerive}
 \title{Finds the optimum Adstock rate.}
 \usage{
-adstockDerive(data, y, x)
+adstockDerive(data, y, x, lim = FALSE)
 }
 \arguments{
 \item{data}{data.frame that holds the data (independent and dependent)}
@@ -12,6 +12,8 @@ adstockDerive(data, y, x)
 \item{y}{Dependent variable e.g. Sales}
 
 \item{x}{Independent variable, of which we want to derive optimum adstock}
+
+\item{lim}{Numeric. Upper limit for adstock rate}
 }
 \description{
 Derives best adstock rate, based on lowest SSE.

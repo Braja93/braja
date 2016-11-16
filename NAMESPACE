@@ -2,6 +2,7 @@
 
 export(addMissingDates)
 export(adstock)
+export(adstock.DeriveAppend)
 export(adstock.maxDecay)
 export(adstock.multiple)
 export(adstockDerive)

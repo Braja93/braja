@@ -8,6 +8,5 @@
 
 namesAsFormula <- function(x) {
   out <- paste("+", names(x))
-  out[1] <- sub("\\+ ", "", x = out[1])
   cat(out, sep = "\n")
 }
