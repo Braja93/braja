@@ -14,7 +14,7 @@ lm.decomp <- function(lm.contribution.object) {
   out <- out[-1,]
   
   out$Proportion <- out$Decomp / sum(out$Decomp)
-  out$Proportion <- round(out$Proportion, digits = 4) * 100
+  out$Proportion <- round(out$Proportion, digits = 4)
   
   out <- rbind(data.table(Variable = paste0("Dependent Variable = ", dependent.var),
                    Decomp = NA,
