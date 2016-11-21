@@ -15,7 +15,7 @@ writeModelToCSV <- function(lm.object, filename, date.index){
   
   # coefficients in dataframe
   out <- data.table::data.table(summary(lm.object)$coefficients)
-  out[, Variable := row.names(summary(lm1)$coefficients)]
+  out[, Variable := row.names(summary(lm.object)$coefficients)]
   
   # format the table
   out[, `Pr(>|t|)` := ifelse(test = `Pr(>|t|)` < 0.001, yes = "< 0.001", no = ifelse(test = `Pr(>|t|)` < 0.01, yes = "< 0.01", no = round(`Pr(>|t|)`, 3)))]
