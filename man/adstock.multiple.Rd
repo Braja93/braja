@@ -14,7 +14,7 @@ adstock.multiple(data, variable, adstock.rates)
 \item{adstock.rates}{One (or many) rates to adstock the variable}
 }
 \description{
-User sets adstock rates, which appends to the input variable in a new table.
+User sets adstock rates, which transforms the input variable, outputting in a new table.
 }
 \examples{
 x <- data.table::fread(system.file("extdata", "TVRs.csv", package = "nladwa"))
