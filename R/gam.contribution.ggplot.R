@@ -7,7 +7,7 @@
 #' @export
 #' @example inst/examples/gam.contribution.ggplot.R
 
-gam.contribution.ggplot <- function(gam.contribution.object) {
+gam.contribution.ggplot <- function(gam.contribution.object, scales = "free_x") {
   
   dt <- copy(gam.contribution.object)
   
@@ -23,7 +23,7 @@ gam.contribution.ggplot <- function(gam.contribution.object) {
   p1 <- ggplot2::ggplot(out, ggplot2::aes(x = xvar, y = contribution, colour = variable)) +
     ggplot2::geom_hline(yintercept = 0, alpha = 0.3) +
     ggplot2::geom_line() +
-    ggplot2::facet_wrap(~variable, ncol = 3, scales = "free") +
+    ggplot2::facet_wrap(~variable, ncol = 3, scales = scales) +
     labs(x = "")
   
   print(p1)
