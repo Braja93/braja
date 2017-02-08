@@ -4,13 +4,14 @@
 \alias{gam.contribution.ggplot}
 \title{Plots the contribution of a GAM's smoothed independent variables}
 \usage{
-gam.contribution.ggplot(gam.contribution.object)
+gam.contribution.ggplot(gam.object, incl.intercept = TRUE,
+  scales = "free_x")
 }
 \arguments{
-\item{gam.contibution.object}{The output of gam.contribution().}
+\item{gam.object}{GAM object. A GAM saved to a variable.}
 }
 \description{
-Takes gam.contribution output and visualises it.
+Takes GAM and visualises it.
 }
 \examples{
 # see example from gam.contribution

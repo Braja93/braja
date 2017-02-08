@@ -6,7 +6,7 @@
 #' @import mgcv
 #' @export
 
-gam.contribtion.thresholds <- function(gam.contribution.object) {
+gam.contribution.thresholds <- function(gam.contribution.object) {
   return(lapply(gam.contribution.object, function(dt) {
     dt[c(which.min(abs(get(names(dt)[2]))),
          which.max(get(names(dt)[2])))]

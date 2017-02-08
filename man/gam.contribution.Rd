@@ -35,8 +35,8 @@ summary(m3)
 
 anova(m1, m2, m3, test = "Chi")
 
-nladwa::gam.contribution.ggplot(nladwa::gam.contribution(m2))
-nladwa::gam.contribution.ggplot(nladwa::gam.contribution(m3))
+nladwa::gam.contribution.ggplot(m2)
+nladwa::gam.contribution.ggplot(m3)
 }
 \keyword{GAM}
 \keyword{contribution}
