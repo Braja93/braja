@@ -25,7 +25,7 @@ addMissingDates <- function(x, date.index, start.date = NULL, end.date = NULL, d
   tomerge.date <- seq(from = start.date, to = end.date, by = data.frequency)
   tomerge.date <- tomerge.date[!(tomerge.date %in% x.dates)]
   tomerge <- data.table::as.data.table(matrix(nrow = length(tomerge.date), ncol = ncol(x), dimnames = list(NULL, names(x)), data = 0))
-  tomerge[, `:=`(date.index, tomerge.date), with = FALSE]
+  tomerge[, `:=`((date.index), tomerge.date)]
   out <- data.table::rbindlist(list(x, tomerge))
   out <- out[, lapply(.SD, sum, na.rm = TRUE), by = date.index]
   data.table::setkeyv(out, date.index)
