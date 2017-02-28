@@ -12,6 +12,8 @@ monthlyToWeekly <- function(x) {
   daterange <- nladwa::getWeek(range(x$Month))
   daterange[2] <- daterange[2] + months(1)
   
+  x <- x[, c("Month", names(Filter(is.numeric, x))), with = FALSE]
+  
   out <- data.table::data.table(Week = seq(from = daterange[1], to = daterange[2], by = 7))
   out[, EOM := lubridate::ceiling_date(Week, unit = "month") - 1]
   out[, Month := as.Date(paste0(format(Week, "%Y-%m-"), "01"))]
