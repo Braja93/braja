@@ -11,7 +11,7 @@ lm.fitconf(lm.object, date.index, conf.level = 0.95)
 
 \item{date.index}{Character. The column from the model source data that is the date variable.}
 
-\item{conf.level}{Confidence level, default = 95%.}
+\item{conf.level}{Confidence level, default = 95\%.}
 }
 \description{
 data.table with date index, model fit, and lower and upper intervals.

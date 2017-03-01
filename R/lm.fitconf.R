@@ -3,7 +3,7 @@
 #' data.table with date index, model fit, and lower and upper intervals.
 #' @param lm.object Output of lm function.
 #' @param date.index Character. The column from the model source data that is the date variable.
-#' @param conf.level Confidence level, default = 95%.
+#' @param conf.level Confidence level, default = 95\%.
 #' @keywords lm confidence fit
 #' @import data.table
 #' @export
