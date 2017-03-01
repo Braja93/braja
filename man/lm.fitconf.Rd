@@ -19,4 +19,3 @@ data.table with date index, model fit, and lower and upper intervals.
 \keyword{confidence}
 \keyword{fit}
 \keyword{lm}
-

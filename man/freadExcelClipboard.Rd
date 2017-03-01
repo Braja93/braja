@@ -13,4 +13,3 @@ freadExcelClipboard(...)
 Create data.table from Excel table that's held in the clipboard.
 }
 \keyword{excel}
-

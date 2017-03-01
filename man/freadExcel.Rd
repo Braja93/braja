@@ -24,4 +24,3 @@ Create data.table from Excel table that's in an XLSX file.
 \keyword{excel}
 \keyword{fread}
 \keyword{xlsx}
-

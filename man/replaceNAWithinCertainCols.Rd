@@ -21,4 +21,3 @@ replaceNAWithinCertainCols(x = x, replacement = "space", string = ".a")
 print(x)
 }
 \keyword{NA}
-

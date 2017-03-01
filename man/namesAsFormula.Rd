@@ -15,4 +15,3 @@ Outputs columns of a t
 \keyword{formula}
 \keyword{lm}
 \keyword{names}
-

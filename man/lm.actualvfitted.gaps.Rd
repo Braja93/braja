@@ -21,4 +21,3 @@ Takes a lm.actualvfitted object and plots.
 \keyword{gaps}
 \keyword{ggplot}
 \keyword{lm}
-

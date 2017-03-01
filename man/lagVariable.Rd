@@ -18,4 +18,3 @@ Lags a variable, adding NAs at the front.
 print(1:10); print(lagVariable(variable = 1:10, lag.amount = 3))
 }
 \keyword{lag}
-

@@ -19,4 +19,3 @@ fixNames(x)
 names(x)
 }
 \keyword{names}
-

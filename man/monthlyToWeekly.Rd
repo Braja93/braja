@@ -23,4 +23,3 @@ monthlyToWeekly(x)
 }
 \keyword{monthly}
 \keyword{weekly}
-

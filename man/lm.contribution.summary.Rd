@@ -17,4 +17,3 @@ Takes a lm and applies coefficients to show how each independent variable contri
 \keyword{contribution}
 \keyword{lm}
 \keyword{summary}
-

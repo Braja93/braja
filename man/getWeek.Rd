@@ -20,4 +20,3 @@ getWeek(x, order = "Mon-Sun")
 getWeek(x, order = "Sun-Mon")
 }
 \keyword{week}
-

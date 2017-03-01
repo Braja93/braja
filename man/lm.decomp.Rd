@@ -15,4 +15,3 @@ Takes lm.contribution output and sums all the independent variables' contributio
 \keyword{contribution}
 \keyword{decomp}
 \keyword{lm}
-

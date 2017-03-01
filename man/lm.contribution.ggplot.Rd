@@ -26,4 +26,3 @@ lm.contribution.ggplot(lm.object)
 \keyword{contribution}
 \keyword{ggplot}
 \keyword{lm}
-

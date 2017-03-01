@@ -20,4 +20,3 @@ uniqueCharCols(x)
 }
 \keyword{character}
 \keyword{unique}
-

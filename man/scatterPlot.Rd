@@ -21,4 +21,3 @@ scatterPlot(mtcars, x = "wt", y = "mpg", title = "Cars")
 }
 \keyword{regression}
 \keyword{scatter}
-

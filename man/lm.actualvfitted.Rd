@@ -15,4 +15,3 @@ Takes a lm.contribution object and outputs a actual vs fitted table.
 \keyword{actual}
 \keyword{fitted}
 \keyword{lm}
-

@@ -36,4 +36,3 @@ ggplot2::ggplot(plot.out2, ggplot2::aes(x = Index, y = value, colour = variable)
   ggplot2::geom_line()
 }
 \keyword{adstock}
-

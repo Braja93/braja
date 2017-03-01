@@ -18,4 +18,3 @@ Adstocks one variable, returns a numeric vector.
 }
 \keyword{adstock}
 \keyword{simple}
-

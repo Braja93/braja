@@ -40,4 +40,3 @@ ggplot2::ggplot(plot.out, ggplot2::aes(x = Week, y = value, colour = variable)) 
 }
 \keyword{adstock}
 \keyword{decay}
-

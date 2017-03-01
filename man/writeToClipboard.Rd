@@ -14,4 +14,3 @@ Writes a data.table or data.frame to the clipboard.
 }
 \keyword{clipboard}
 \keyword{write}
-

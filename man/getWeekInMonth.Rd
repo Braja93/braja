@@ -15,4 +15,3 @@ Gets week number (in month) from a week, has to be Date class
 \keyword{month}
 \keyword{number}
 \keyword{week}
-

@@ -19,4 +19,3 @@ Takes GAM and visualises it.
 \keyword{contribution}
 \keyword{gam}
 \keyword{ggplot}
-

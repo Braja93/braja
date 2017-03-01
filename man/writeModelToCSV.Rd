@@ -21,4 +21,3 @@ Writes summary(lm.object), AvF, decomp to CSVs.
 \keyword{decomp}
 \keyword{lm}
 \keyword{summary}
-

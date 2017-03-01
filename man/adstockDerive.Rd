@@ -44,4 +44,3 @@ sum(residuals(model2)^2) < sum(residuals(model1)^2)
 }
 \keyword{adstock}
 \keyword{derive}
-

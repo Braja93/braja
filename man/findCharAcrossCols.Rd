@@ -21,4 +21,3 @@ x[findCharAcrossCols(x, "virg")$Species, ]
 }
 \keyword{character}
 \keyword{unique}
-

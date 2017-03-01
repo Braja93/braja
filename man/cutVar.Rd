@@ -26,4 +26,3 @@ cutVar(vec, breaks = 3)
 cutVar(vec, breaks = 3, midpoints = TRUE)
 }
 \keyword{cut}
-

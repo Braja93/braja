@@ -18,4 +18,3 @@ Prints a ggplot of selected variables over time.
 }
 \keyword{plot}
 \keyword{variables}
-

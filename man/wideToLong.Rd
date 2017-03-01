@@ -25,4 +25,3 @@ wideToLong(x = x, id.vars = "Date", writeToClipboard = FALSE)
 \keyword{long}
 \keyword{reshape}
 \keyword{wide}
-

@@ -16,4 +16,3 @@ Takes a lm.actualvfitted object and plots.
 \keyword{fitted}
 \keyword{ggplot}
 \keyword{lm}
-

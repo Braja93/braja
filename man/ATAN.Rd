@@ -17,4 +17,3 @@ ATAN(data, variable, rate)
 User sets rates, which transforms the input variable, outputting in a new table.
 }
 \keyword{ATAN}
-

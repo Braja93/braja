@@ -19,4 +19,3 @@ stackCSVsfromFolder()
 }
 \keyword{csv}
 \keyword{stack}
-

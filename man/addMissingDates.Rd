@@ -30,4 +30,3 @@ addMissingDates(x = x, date.index = "Date", data.frequency = 1, start.date = "20
 }
 \keyword{dates}
 \keyword{missing}
-

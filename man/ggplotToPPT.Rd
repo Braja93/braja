@@ -19,4 +19,3 @@ Exports ggplot graph to PNG, readable in PPT presentations.
 }
 \keyword{PPT}
 \keyword{ggplot}
-

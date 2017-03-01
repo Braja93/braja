@@ -15,4 +15,3 @@ Takes a gam.contribution object.
 \keyword{GAM}
 \keyword{contribution}
 \keyword{threshold}
-

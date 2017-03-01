@@ -16,4 +16,3 @@ Writes a data.table or data.frame to a CSV, with a filename manually entered.
 }
 \keyword{CSV}
 \keyword{write}
-

@@ -24,4 +24,3 @@ Takes a formula, a list of variables to test, and the data.table they are stored
 \keyword{lm}
 \keyword{multivariable}
 \keyword{test}
-

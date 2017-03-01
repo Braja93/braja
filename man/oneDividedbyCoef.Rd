@@ -14,4 +14,3 @@ How many of independent var needed to get 1 dependent var?
 }
 \keyword{coefficient}
 \keyword{lm}
-

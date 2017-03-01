@@ -40,4 +40,3 @@ nladwa::gam.contribution.ggplot(m3)
 }
 \keyword{GAM}
 \keyword{contribution}
-

@@ -38,4 +38,3 @@ warning("This function is only really any good for plotting one variable")
 }
 \keyword{ggplot}
 \keyword{shade}
-

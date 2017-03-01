@@ -16,4 +16,3 @@ Outputs a ggplot of fit and confidence interval, over time.
 \keyword{fit}
 \keyword{lm}
 \keyword{plot}
-

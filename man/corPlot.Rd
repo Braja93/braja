@@ -17,4 +17,3 @@ corPlot(mtcars)
 }
 \keyword{correlation}
 \keyword{plot}
-

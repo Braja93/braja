@@ -22,4 +22,3 @@ print(lm.object)
 }
 \keyword{contribution}
 \keyword{lm}
-

@@ -16,4 +16,3 @@ Prints a ggplot of residuals from a model over time.
 }
 \keyword{plot}
 \keyword{residuals}
-

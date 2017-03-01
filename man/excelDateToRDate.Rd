@@ -20,4 +20,3 @@ print(x); class(x)
 }
 \keyword{date}
 \keyword{excel}
-

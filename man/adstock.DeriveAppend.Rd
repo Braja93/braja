@@ -21,4 +21,3 @@ Derives best adstock rate, based on lowest SSE, and adds the the original data.t
 \keyword{adstock}
 \keyword{append}
 \keyword{derive}
-
