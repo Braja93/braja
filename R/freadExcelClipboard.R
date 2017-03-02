@@ -5,8 +5,8 @@
 #' @keywords excel
 #' @export
 
-freadExcelClipboard <- function(...) {
+freadExcelClipboard <- function(check.names = FALSE, ...) {
   x <- tempfile()
   writeLines(readLines("clipboard"), x)
-  data.table::fread(x, ...)
+  data.table::fread(x, check.names = check.names, ...)
 }

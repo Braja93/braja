@@ -20,6 +20,8 @@ freadExcel <- function(file, date.index = NULL, sheet = 1, startRow = 1, origin 
     out[, date.index := openxlsx::convertToDate(get(date.index), origin = origin), with = FALSE]
   }
   
+  nladwa::fixNames(out)
+  
   return(out)
   
 }
