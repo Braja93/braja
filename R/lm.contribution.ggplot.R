@@ -23,7 +23,7 @@ lm.contribution.ggplot <- function(lm.contribution.object, date.index = NULL, de
   if (m.out[variable != dependent.var, min(value)] >= 0) {
     lm.plot <- ggplot2::ggplot() +
       ggplot2::geom_bar(data = m.out[variable != dependent.var], ggplot2::aes_string(x = date.index, y = "value", fill = "variable", group = "variable"), stat = "identity") +
-      ggplot2::geom_line(data = m.out[variable == dependent.var], ggplot2::aes_string(x = date.index, y = "value", fill = "variable", group = "variable")) +
+      ggplot2::geom_line(data = m.out[variable == dependent.var], ggplot2::aes_string(x = date.index, y = "value", group = "variable")) +
       ggplot2::ylab(dependent.var)
   }
   else {
