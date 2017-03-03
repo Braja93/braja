@@ -17,7 +17,7 @@ freadExcel <- function(file, date.index = NULL, sheet = 1, startRow = 1, origin 
   if(is.null(date.index)) {
     message("No date.index selected.")
   } else {
-    out[, date.index := openxlsx::convertToDate(get(date.index), origin = origin), with = FALSE]
+    out[, (date.index) := openxlsx::convertToDate(get(date.index), origin = origin)]
   }
   
   nladwa::fixNames(out)
