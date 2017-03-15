@@ -1,6 +1,6 @@
 #' Create a data.table for actual v fitted
 #'
-#' Takes a lm.contribution object and outputs a actual vs fitted table.
+#' Takes a lm.contribution object and outputs an actual vs fitted table.
 #' @param lm.contribution.object lm.contribution object. Output of lm.contribtion saved as an object.
 #' @keywords lm actual fitted
 #' @import data.table

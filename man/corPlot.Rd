@@ -4,7 +4,7 @@
 \alias{corPlot}
 \title{Plot correlation matrix.}
 \usage{
-corPlot(x)
+corPlot(x, use = "complete.obs")
 }
 \arguments{
 \item{x}{data.table}

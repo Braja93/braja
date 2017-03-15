@@ -10,7 +10,7 @@ lm.actualvfitted(lm.contribution.object)
 \item{lm.contribution.object}{lm.contribution object. Output of lm.contribtion saved as an object.}
 }
 \description{
-Takes a lm.contribution object and outputs a actual vs fitted table.
+Takes a lm.contribution object and outputs an actual vs fitted table.
 }
 \keyword{actual}
 \keyword{fitted}
