@@ -1,5 +1,5 @@
 x <- data.table::fread(system.file("extdata", "TVRs.csv", package = "nladwa"))
-x[, Week := as.Date(Week, "%d/%m/%Y")]
+x[, Week := excelDateToRDate(Week)]
 
 out1 <- adstock.maxDecay(data = x, variable = "TVRs", adstock.rates = 0.5, max.decay = 2)
 out2 <- adstock.maxDecay(data = x, variable = "TVRs", adstock.rates = 0.5, max.decay = 10)
