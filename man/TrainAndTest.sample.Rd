@@ -4,7 +4,7 @@
 \alias{TrainAndTest.sample}
 \title{Create a data.table for actual v fitted, with train and test sets}
 \usage{
-TrainAndTest.sample(data, train.size = 0.75, date.index)
+TrainAndTest.sample(data, train.size = 0.75, date.index = "Week")
 }
 \arguments{
 \item{data}{data.table.}

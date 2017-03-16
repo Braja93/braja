@@ -8,7 +8,7 @@
 #' @import data.table
 #' @export
 
-TrainAndTest.sample <- function(data, train.size = 0.75, date.index) {
+TrainAndTest.sample <- function(data, train.size = 0.75, date.index = "Week") {
   
   if(train.size > 1 | train.size < 0) { stop("train.size must be between 0 and 1") }
   
@@ -18,7 +18,9 @@ TrainAndTest.sample <- function(data, train.size = 0.75, date.index) {
   
   train_ind <- sample(seq_len(nrow(out)), size = smp_size)
   out[, Type := ifelse(.I %in% train_ind, "Train", "Test")]
+  options(warn = 0)
   out <- data.table::melt(out, id.vars = c(date.index, "Type"))
+  options(warn = -1)
   out <- data.table::dcast.data.table(out, get(date.index) ~ variable + Type, sep = ".")
   data.table::setnames(out, "date.index", date.index)
   
