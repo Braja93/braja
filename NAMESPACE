@@ -2,6 +2,7 @@
 
 export(ATAN)
 export(MAPE)
+export(MAPE.trainAndTest)
 export(addMissingDates)
 export(adstock)
 export(adstock.DeriveAppend)

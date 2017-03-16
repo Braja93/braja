@@ -29,7 +29,7 @@ print(lm1.trainAndTest)
 
 lm.trainAndTest.ggplot(lm1.trainAndTest)
 
-lm1.trainAndTest[complete.cases(lm1.trainAndTest), .(MAPE = MAPE(Actual = Actual, Fitted = Fitted)), by = Type]
+MAPE.trainAndTest(lm1.trainAndTest)
 }
 \keyword{actual}
 \keyword{fitted}
