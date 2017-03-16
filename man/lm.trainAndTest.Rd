@@ -20,7 +20,7 @@ Takes a lm object and outputs an actual vs fitted table.
 x <- data.table::fread(system.file("extdata", "lm.csv", package = "nladwa"))
 x[, Week := excelDateToRDate(Week)]
 
-x <- createTrainAndTest(x, "TotalGrossLeads", to.break = "2015-04-06", append = TRUE)
+x <- TrainAndTest.break(x, "TotalGrossLeads", to.break = "2015-04-06", append = TRUE)
 # 06/04/2015
 
 lm1 <- lm(TotalGrossLeads.Train ~ Search.Spend + Competitor.Spend, data = x)

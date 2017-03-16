@@ -11,7 +11,7 @@
 #' @export
 #' @example inst/examples/lm.trainAndTest.R
 
-createTrainAndTest <- function(data, variable, date.index = "Week", to.break = NA, append = FALSE) {
+TrainAndTest.break <- function(data, variable, date.index = "Week", to.break = NA, append = FALSE) {
   
   select.cols <- c(date.index, variable)
   x <- data[, ..select.cols]
