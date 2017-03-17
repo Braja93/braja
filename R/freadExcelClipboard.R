@@ -5,8 +5,13 @@
 #' @keywords excel
 #' @export
 
-freadExcelClipboard <- function(check.names = FALSE, ...) {
+freadExcelClipboard <- function (date.col = "Week", check.names = FALSE, ...) {
   x <- tempfile()
   writeLines(readLines("clipboard"), x)
-  data.table::fread(x, check.names = check.names, ...)
+  x <- data.table::fread(x, check.names = check.names, ...)
+  
+  if(!is.na(date.col)) {x[, eval(date.col) := excelDateToRDate(get(date.col))]}
+  
+  return(x[])
+  
 }

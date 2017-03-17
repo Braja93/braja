@@ -4,7 +4,7 @@
 \alias{freadExcelClipboard}
 \title{Reads Excel table from clipboard to data.table}
 \usage{
-freadExcelClipboard(check.names = FALSE, ...)
+freadExcelClipboard(date.col = "Week", check.names = FALSE, ...)
 }
 \arguments{
 \item{No}{arguments}
