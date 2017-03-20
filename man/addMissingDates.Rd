@@ -4,8 +4,8 @@
 \alias{addMissingDates}
 \title{Adds missing dates to wide data}
 \usage{
-addMissingDates(x, date.index, start.date = NULL, end.date = NULL,
-  data.frequency = 7)
+addMissingDates(x, date.index = "Week", start.date = NULL,
+  end.date = NULL, data.frequency = 7)
 }
 \arguments{
 \item{x}{data.table. In wide format.}

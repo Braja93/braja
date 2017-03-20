@@ -4,7 +4,7 @@
 \alias{writeModelToCSV}
 \title{Linear model summary, actual v fitted, and decomp to CSV}
 \usage{
-writeModelToCSV(lm.object, filename, date.index)
+writeModelToCSV(lm.object, filename, date.index = "Week")
 }
 \arguments{
 \item{lm.object}{lm object. A lm saved to a variable.}

@@ -8,7 +8,7 @@
 #' @export
 #' @example inst/examples/lm.contribution.R
 
-lm.contribution <- function(lm.object, date.index) {
+lm.contribution <- function(lm.object, date.index = "Week") {
   data.source <- as.character(lm.object$call[3]) # data source of the regression
   out.cols <- c(date.index, names(lm.object$model)) # cols the the output should have (index, dependent and all independents)
   dependent.var <- out.cols[2] # dependent var

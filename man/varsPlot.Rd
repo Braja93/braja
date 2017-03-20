@@ -4,7 +4,7 @@
 \alias{varsPlot}
 \title{Plot multiple variables over time.}
 \usage{
-varsPlot(x, date.index, vars)
+varsPlot(x, date.index = "Week", vars)
 }
 \arguments{
 \item{x}{data.table}

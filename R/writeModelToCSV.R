@@ -7,7 +7,7 @@
 #' @keywords lm CSV summary AvF decomp
 #' @export
 
-writeModelToCSV <- function(lm.object, filename, date.index){
+writeModelToCSV <- function(lm.object, filename, date.index = "Week"){
   
   filename.summary <- paste0(filename,"_Summary")
   

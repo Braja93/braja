@@ -4,7 +4,7 @@
 \alias{residPlot}
 \title{Plot residuals of a lm over time.}
 \usage{
-residPlot(lm.object, date.index)
+residPlot(lm.object, date.index = "Week")
 }
 \arguments{
 \item{lm.object}{Output of lm function.}

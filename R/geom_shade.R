@@ -12,7 +12,7 @@
 #' @export
 #' @example inst/examples/geom_shade.R
 
-geom_shade <- function(data, variable, date.index, alpha = 0.2, overlap = 3.5, fill = "pink") {
+geom_shade <- function(data, variable, date.index = "Week", alpha = 0.2, overlap = 3.5, fill = "pink") {
   geom_rect(data = data[get(variable) == 1], ggplot2::aes_string(xmin = paste0(date.index, "-", overlap),
                                                         xmax = paste0(date.index, "+", overlap)),
             ymin = -Inf,

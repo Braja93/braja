@@ -4,8 +4,8 @@
 \alias{geom_shade}
 \title{Geom for shading graph to highlight periods.}
 \usage{
-geom_shade(data, variable, date.index, alpha = 0.2, overlap = 3.5,
-  fill = "pink")
+geom_shade(data, variable, date.index = "Week", alpha = 0.2,
+  overlap = 3.5, fill = "pink")
 }
 \arguments{
 \item{data}{data.table that holds the data}

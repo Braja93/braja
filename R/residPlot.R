@@ -8,7 +8,7 @@
 #' @import ggplot2
 #' @export
 
-residPlot <- function(lm.object, date.index) {
+residPlot <- function(lm.object, date.index = "Week") {
   
   lm.data <- data.table(fortify(lm.object))
   data.source <- as.character(lm.object$call[3])

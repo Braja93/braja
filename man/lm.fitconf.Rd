@@ -4,7 +4,7 @@
 \alias{lm.fitconf}
 \title{Fit of a lm with confidence intervals.}
 \usage{
-lm.fitconf(lm.object, date.index, conf.level = 0.95)
+lm.fitconf(lm.object, date.index = "Week", conf.level = 0.95)
 }
 \arguments{
 \item{lm.object}{Output of lm function.}

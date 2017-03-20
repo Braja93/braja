@@ -9,7 +9,7 @@
 #' @import ggplot2
 #' @export
 
-varsPlot <- function(x, date.index, vars) {
+varsPlot <- function(x, date.index = "Week", vars) {
   
   vars <- c(date.index, vars)
   

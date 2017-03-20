@@ -4,7 +4,7 @@
 \alias{lm.contribution.summary}
 \title{Outputs the contribution of each lm independent variable - at a top level}
 \usage{
-lm.contribution.summary(lm.obj, date.index)
+lm.contribution.summary(lm.obj, date.index = "Week")
 }
 \arguments{
 \item{date.index}{Character. The date index of the lm(data = ?) variable.}

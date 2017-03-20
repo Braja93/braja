@@ -8,7 +8,7 @@
 #' @import data.table
 #' @export
 
-lm.fitconf <- function(lm.object, date.index, conf.level = 0.95) {
+lm.fitconf <- function(lm.object, date.index = "Week", conf.level = 0.95) {
   
   data.source <- as.character(lm.object$call[3])
   data.cols <- names(lm.object$model)

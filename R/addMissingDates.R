@@ -11,7 +11,7 @@
 #' @export
 #' @example inst/examples/addMissingDates.R
 
-addMissingDates <- function(x, date.index, start.date = NULL, end.date = NULL, data.frequency = 7) {
+addMissingDates <- function(x, date.index = "Week", start.date = NULL, end.date = NULL, data.frequency = 7) {
   
   if(is.null(start.date)) start.date <- min(x[, get(date.index)])
   if(is.null(end.date)) end.date <- max(x[, get(date.index)])

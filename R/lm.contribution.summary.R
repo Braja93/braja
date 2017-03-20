@@ -7,7 +7,7 @@
 #' @import data.table
 #' @export
 
-lm.contribution.summary <- function(lm.obj, date.index) {
+lm.contribution.summary <- function(lm.obj, date.index = "Week") {
   
   out <- nladwa::lm.contribution(lm.obj, date.index = date.index)
   

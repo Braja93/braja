@@ -4,7 +4,7 @@
 \alias{lm.contribution}
 \title{Outputs the contribution of each lm independent variable}
 \usage{
-lm.contribution(lm.object, date.index)
+lm.contribution(lm.object, date.index = "Week")
 }
 \arguments{
 \item{lm.object}{lm object. A lm saved to a variable.}
