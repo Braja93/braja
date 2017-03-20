@@ -2,14 +2,15 @@
 #'
 #' Takes a lm object and outputs an actual vs fitted table.
 #' @param lm.trainAndTest.object The output of lm.trainAndTest.
-#' @param date.index Character. Only define if error. The date index of the lm(data = ?) variable, as a character, e.g. "Week".
 #' @keywords lm actual fitted train test ggplot
 #' @import data.table
 #' @import ggplot2
 #' @export
 #' @example inst/examples/lm.trainAndTest.R
 
-lm.trainAndTest.ggplot <- function(lm.trainAndTest.object, date.index = "Week") {
+lm.trainAndTest.ggplot <- function(lm.trainAndTest.object) {
+  
+  date.index <- names(lm.trainAndTest.object)[1]
   
   options(warn = -1)
   out <- data.table::melt(lm.trainAndTest.object, id.vars = c(date.index, "Type"))

@@ -14,7 +14,7 @@ lm.trainAndTest <- function(lm.object, date.index = "Week", test.dep.var = FALSE
   if(test.dep.var == FALSE) test.dep.var <- gsub("Train", "Test", names(lm.object$model)[1])
   
   lm.train <- nladwa::lm.actualvfitted(nladwa::lm.contribution(lm.object = lm.object, date.index = date.index))
-  data.table::setnames(lm.train, names(lm.train), c("Week", "Actual", "Fitted"))
+  data.table::setnames(lm.train, names(lm.train), c(date.index, "Actual", "Fitted"))
   lm.train[, Type := "Train"]
   
   lm.test.data <- x[!is.na(get(test.dep.var))]

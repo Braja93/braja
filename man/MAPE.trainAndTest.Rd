@@ -2,7 +2,7 @@
 % Please edit documentation in R/MAPE.trainAndTest.R
 \name{MAPE.trainAndTest}
 \alias{MAPE.trainAndTest}
-\title{Mean Average Percentage Error on a lm.trainAndTest.object}
+\title{Mean Absolute Percentage Error on a lm.trainAndTest.object}
 \usage{
 MAPE.trainAndTest(lm.trainAndTest.object)
 }
@@ -10,7 +10,7 @@ MAPE.trainAndTest(lm.trainAndTest.object)
 \item{lm.trainAndTest.object}{The output of lm.trainAndTest.}
 }
 \description{
-Adstocks one variable, returns a numeric vector.
+Mean Absolute Percentage Error on a lm.trainAndTest.object.
 }
 \examples{
 x <- data.table::fread(system.file("extdata", "lm.csv", package = "nladwa"))
@@ -24,6 +24,7 @@ lm1.trainAndTest <- lm.trainAndTest(lm.object = lm1, date.index = "Week")
 print(lm1.trainAndTest)
 
 lm.trainAndTest.ggplot(lm1.trainAndTest)
+lm.trainAndTest.resid.ggplot(lm1.trainAndTest)
 
 MAPE.trainAndTest(lm1.trainAndTest)
 }

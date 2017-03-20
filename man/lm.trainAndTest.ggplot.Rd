@@ -4,12 +4,10 @@
 \alias{lm.trainAndTest.ggplot}
 \title{Create a data.table for actual v fitted, with train and test sets}
 \usage{
-lm.trainAndTest.ggplot(lm.trainAndTest.object, date.index = "Week")
+lm.trainAndTest.ggplot(lm.trainAndTest.object)
 }
 \arguments{
 \item{lm.trainAndTest.object}{The output of lm.trainAndTest.}
-
-\item{date.index}{Character. Only define if error. The date index of the lm(data = ?) variable, as a character, e.g. "Week".}
 }
 \description{
 Takes a lm object and outputs an actual vs fitted table.
@@ -26,6 +24,7 @@ lm1.trainAndTest <- lm.trainAndTest(lm.object = lm1, date.index = "Week")
 print(lm1.trainAndTest)
 
 lm.trainAndTest.ggplot(lm1.trainAndTest)
+lm.trainAndTest.resid.ggplot(lm1.trainAndTest)
 
 MAPE.trainAndTest(lm1.trainAndTest)
 }

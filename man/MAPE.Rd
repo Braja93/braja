@@ -2,7 +2,7 @@
 % Please edit documentation in R/MAPE.R
 \name{MAPE}
 \alias{MAPE}
-\title{Mean Average Percentage Error}
+\title{Mean Absolute Percentage Error}
 \usage{
 MAPE(Actual, Fitted)
 }
@@ -12,7 +12,7 @@ MAPE(Actual, Fitted)
 \item{Fitted}{vector of "Fitted" data}
 }
 \description{
-Adstocks one variable, returns a numeric vector.
+Mean Absolute Percentage Error.
 }
 \keyword{MAPE}
 \keyword{error}

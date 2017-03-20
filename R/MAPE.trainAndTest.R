@@ -1,6 +1,6 @@
-#' Mean Average Percentage Error on a lm.trainAndTest.object
+#' Mean Absolute Percentage Error on a lm.trainAndTest.object
 #'
-#' Adstocks one variable, returns a numeric vector.
+#' Mean Absolute Percentage Error on a lm.trainAndTest.object.
 #' @param lm.trainAndTest.object The output of lm.trainAndTest.
 #' @keywords MAPE error train test
 #' @export

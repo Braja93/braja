@@ -1,6 +1,6 @@
-#' Mean Average Percentage Error
+#' Mean Absolute Percentage Error
 #'
-#' Adstocks one variable, returns a numeric vector.
+#' Mean Absolute Percentage Error.
 #' @param Actual vector of "Actual" data
 #' @param Fitted vector of "Fitted" data
 #' @keywords MAPE error

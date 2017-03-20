@@ -33,6 +33,7 @@ lm1.trainAndTest <- lm.trainAndTest(lm.object = lm1, date.index = "Week")
 print(lm1.trainAndTest)
 
 lm.trainAndTest.ggplot(lm1.trainAndTest)
+lm.trainAndTest.resid.ggplot(lm1.trainAndTest)
 
 MAPE.trainAndTest(lm1.trainAndTest)
 }
