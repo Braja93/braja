@@ -14,7 +14,8 @@ lm.nladwa <- function(x, formula, ..., date.index = "Week", conf.level = 0.95, t
   
   lm.out <- lm(data = x, formula = formula, ...)
   
-  out <- list("lm.object" = lm.out,
+  out <- list("formula" = formula,
+              "lm.object" = lm.out,
               "lm.cont" = nladwa::lm.contribution(lm.out, date.index = date.index),
               "lm.cont.summary" = nladwa::lm.contribution.summary(lm.out, date.index = date.index),
               "lm.avf" = nladwa::lm.actualvfitted(nladwa::lm.contribution(lm.out, date.index = date.index)),
