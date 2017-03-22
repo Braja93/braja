@@ -16,8 +16,8 @@ lm.trainAndTest.ggplot <- function(lm.trainAndTest.object) {
   options(warn = 0)
   
   ggplot2::ggplot() +
-    ggplot2::geom_line(data = temp[variable == "Actual"], ggplot2::aes(Week, value), colour = "black", alpha = 0.4) +
-    ggplot2::geom_line(data = temp[variable == "Fitted"], ggplot2::aes(Week, value, colour = Type)) +
+    ggplot2::geom_line(data = out[variable == "Actual"], ggplot2::aes(Week, value), colour = "black", alpha = 0.4) +
+    ggplot2::geom_line(data = out[variable == "Fitted"], ggplot2::aes(Week, value, colour = Type)) +
     ggplot2::ylab("")
   
 }
