@@ -18,9 +18,9 @@ TrainAndTest.sample <- function(data, train.size = 0.75, date.index = "Week") {
   
   train_ind <- sample(seq_len(nrow(out)), size = smp_size)
   out[, Type := ifelse(.I %in% train_ind, "Train", "Test")]
-  options(warn = 0)
-  out <- data.table::melt(out, id.vars = c(date.index, "Type"))
   options(warn = -1)
+  out <- data.table::melt(out, id.vars = c(date.index, "Type"))
+  options(warn = 0)
   out <- data.table::dcast.data.table(out, get(date.index) ~ variable + Type, sep = ".")
   data.table::setnames(out, "date.index", date.index)
   

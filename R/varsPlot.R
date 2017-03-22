@@ -13,7 +13,9 @@ varsPlot <- function(x, date.index = "Week", vars) {
   
   vars <- c(date.index, vars)
   
+  options(warn = -1)
   meltplot <- melt(x[, vars, with = FALSE], id.vars = date.index, verbose = FALSE)
+  options(warn = 0)
   
   vars.plot <- ggplot(meltplot, aes_string(x = date.index, y = "value")) +
     geom_line() +
