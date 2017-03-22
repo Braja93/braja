@@ -8,16 +8,16 @@
 #' @export
 #' @example inst/examples/lm.trainAndTest.R
 
-lm.trainAndTest.ggplot <- function(lm.trainAndTest.object) {
-  
+lm.trainAndTest.ggplot <- function (lm.trainAndTest.object) {
   date.index <- names(lm.trainAndTest.object)[1]
+  
   options(warn = -1)
   out <- data.table::melt(lm.trainAndTest.object, id.vars = c(date.index, "Type"))
   options(warn = 0)
   
   ggplot2::ggplot() +
-    ggplot2::geom_line(data = out[variable == "Actual"], ggplot2::aes(Week, value), colour = "black", alpha = 0.4) +
-    ggplot2::geom_line(data = out[variable == "Fitted"], ggplot2::aes(Week, value, colour = Type)) +
+    ggplot2::geom_line(data = out[variable == "Actual"], ggplot2::aes(Week, value), colour = "black") +
+    ggplot2::geom_point(data = out[variable == "Fitted"], ggplot2::aes(Week, value, colour = Type)) + 
     ggplot2::ylab("")
-  
 }
+
