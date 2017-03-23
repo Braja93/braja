@@ -8,12 +8,10 @@
 
 oneDividedbyCoef <- function(lm.object) {
   
-  KPI <- paste0("KPI.", lm.object$call[[2]][[2]])
-  
   out <- data.table::data.table(names(coef(lm.object)),
                     format(1/coef(lm.object), scientific = FALSE))
   
-  setnames(out, names(out), c(KPI, "one.dividedby.coef"))
+  setnames(out, names(out), c("independent.var", "one.dividedby.coef"))
   
   return(out[])
 }
