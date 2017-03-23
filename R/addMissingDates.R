@@ -29,5 +29,5 @@ addMissingDates <- function(x, date.index = "Week", start.date = NULL, end.date 
   out <- data.table::rbindlist(list(x, tomerge))
   out <- out[, lapply(.SD, sum, na.rm = TRUE), by = date.index]
   data.table::setkeyv(out, date.index)
-  return(out)
+  return(out[])
 }

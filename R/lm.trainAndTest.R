@@ -26,5 +26,5 @@ lm.trainAndTest <- function(lm.object, date.index = "Week", test.dep.var = FALSE
   
   lm.traintest <- data.table::rbindlist(list(lm.train, lm.test), use.names = TRUE)
   
-  return(lm.traintest)
+  return(lm.traintest[])
 }

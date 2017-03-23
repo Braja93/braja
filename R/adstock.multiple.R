@@ -19,5 +19,5 @@ adstock.multiple <- function(data, variable, adstock.rates) {
   
   setnames(out, names(out), paste(variable, as.character(adstock.rates), sep = "."))
   
-  return(out)
+  return(out[])
 }

@@ -41,5 +41,5 @@ lm.contribution <- function(lm.object, date.index = "Week") {
     setnames(out, "(Intercept)", "Intercept")
     }
   
-  return(out)
+  return(out[])
 }

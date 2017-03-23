@@ -15,5 +15,5 @@ oneDividedbyCoef <- function(lm.object) {
   
   setnames(out, names(out), c(KPI, "one.dividedby.coef"))
   
-  return(out)
+  return(out[])
 }

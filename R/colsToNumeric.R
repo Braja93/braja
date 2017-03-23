@@ -33,7 +33,7 @@ colsToNumeric <- function(x, colsToTransform, overwrite = FALSE) {
   if(isTRUE(overwrite)) {
     x[, eval(colsToTransform) := out]
   } else {
-    return(out) 
+    return(out[]) 
   }
 }
   

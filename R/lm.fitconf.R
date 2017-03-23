@@ -22,5 +22,5 @@ lm.fitconf <- function(lm.object, date.index = "Week", conf.level = 0.95) {
   data.table::setcolorder(out, c(date.index, "lwr", "fit", "upr"))
   data.table::setnames(out, names(out), c(date.index, "Lower", "Fit", "Upper"))
   
-  return(out)
+  return(out[])
 }

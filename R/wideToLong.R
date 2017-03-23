@@ -13,6 +13,6 @@ wideToLong <- function(x, id.vars, writeToClipboard) {
   if (writeToClipboard == TRUE) {
     writeToClipboard(xm)
   } else if (writeToClipboard == FALSE) {
-    return(xm)
+    return(xm[])
   }
 }

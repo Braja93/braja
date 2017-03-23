@@ -19,6 +19,6 @@ ATAN <- function(data, variable, rate) {
   
   setnames(out, names(out), paste(variable, "ATAN", as.character(rate), sep = "."))
   
-  return(out)
+  return(out[])
   
 }

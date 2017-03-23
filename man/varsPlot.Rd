@@ -4,14 +4,14 @@
 \alias{varsPlot}
 \title{Plot multiple variables over time.}
 \usage{
-varsPlot(x, date.index = "Week", vars)
+varsPlot(x, vars, date.index = "Week")
 }
 \arguments{
 \item{x}{data.table}
 
-\item{date.index}{Character. The column in x that is the date variable.}
-
 \item{vars}{Vector of characters - columns from x to be plotted.}
+
+\item{date.index}{Character. The column in x that is the date variable.}
 }
 \description{
 Prints a ggplot of selected variables over time.

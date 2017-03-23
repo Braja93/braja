@@ -10,7 +10,7 @@
 #' @import data.table
 #' @export
 
-lm.multiVariableTesting <- function(data, formula.to.test, test.variables, sort.var = "Pr(>|t|)") {
+lm.multiVariableTesting <- function(data, formula.to.test, test.variables, sort.var = "Pr(>|t|)", decreasing = FALSE) {
   
   out <- lapply(test.variables, function(x){
     summary(lm(formula = as.formula(paste(formula.to.test, "+", x)), data = data))$coefficients})
@@ -20,29 +20,7 @@ lm.multiVariableTesting <- function(data, formula.to.test, test.variables, sort.
   out <- data.table::rbindlist(out)
   out[, Variable := test.variables]
   out <- out[, c("Variable", "Estimate", "Std. Error", "t value", "Pr(>|t|)"), with = FALSE]
-  out <- out[order(get(sort.var), decreasing = )]
-  return(out)
-}
-
-
-function (data, formula.to.test, test.variables, sort.var = "Pr(>|t|)", decreasing = FALSE) 
-{
-  out <- lapply(test.variables, function(x) {
-    summary(lm(formula = as.formula(paste(formula.to.test, 
-                                          "+", x)), data = data))$coefficients
-  })
-  out <- lapply(out, FUN = function(x) {
-    x[nrow(x), 1:4]
-  })
-  out <- lapply(out, FUN = function(x) {
-    data.table::data.table(t(x))
-  })
-  out <- data.table::rbindlist(out)
-  out[, `:=`(Variable, test.variables)]
-  out <- out[, c("Variable", "Estimate", "Std. Error", "t value", 
-                 "Pr(>|t|)"), with = FALSE]
-  
   out <- out[order(get(sort.var), decreasing = decreasing)]
   
-  return(out)
+  return(out[])
 }

@@ -32,5 +32,5 @@ adstock.maxDecay <- function(data, variable, adstock.rates, max.decay) {
   
   out <- cbind(data, out)
   
-  return(out)
+  return(out[])
 }

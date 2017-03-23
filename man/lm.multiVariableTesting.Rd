@@ -5,7 +5,7 @@
 \title{Tests multiple variables, returning a summary table}
 \usage{
 lm.multiVariableTesting(data, formula.to.test, test.variables,
-  sort.var = "Pr(>|t|)")
+  sort.var = "Pr(>|t|)", decreasing = FALSE)
 }
 \arguments{
 \item{data}{data.table. Where all the variables are stored.}

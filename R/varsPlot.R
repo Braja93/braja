@@ -9,7 +9,7 @@
 #' @import ggplot2
 #' @export
 
-varsPlot <- function(x, date.index = "Week", vars) {
+varsPlot <- function(x, vars, date.index = "Week") {
   
   vars <- c(date.index, vars)
   
@@ -22,4 +22,5 @@ varsPlot <- function(x, date.index = "Week", vars) {
     facet_grid(variable ~ ., scales = "free_y")
   
   print(vars.plot)
+  
 }

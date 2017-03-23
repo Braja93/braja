@@ -19,5 +19,5 @@ lm.decomp <- function(lm.contribution.object) {
   
   out <- rbindlist(list(data.table(Variable = paste0("Dependent Variable = ", dependent.var), Decomp = NA, Proportion = NA), out))
   
-  return(out)
+  return(out[])
 }
