@@ -10,16 +10,25 @@
 #' @import data.table
 #' @export
 
-lm.multiVariableTesting <- function(data, formula.to.test, test.variables, sort.var = "Pr(>|t|)", decreasing = FALSE) {
+lm.multiVariableTesting <- function (data, formula.to.test, test.variables, sort.var = "Pr(>|t|)", decreasing = FALSE) {
   
-  out <- lapply(test.variables, function(x){
-    summary(lm(formula = as.formula(paste(formula.to.test, "+", x)), data = data))$coefficients})
+  lm.all <- lapply(test.variables, function(x) { summary(lm(formula = as.formula(paste(formula.to.test, "+", x)), data = data)) })
   
-  out <- lapply(out, FUN = function(x) {x[nrow(x), 1:4]})
-  out <- lapply(out, FUN = function(x) {data.table::data.table(t(x))})
+  out <- lapply(lm.all, function(x) { x$coefficients })
+  
+  out <- lapply(out, FUN = function(x) { x[nrow(x), 1:4] })
+  
+  SSE <- lapply(lm.all, function(x) { data.table(SSE = sum(x$residuals^2)) })
+  
+  out <- lapply(out, FUN = function(x) { data.table::data.table(t(x)) })
+  
   out <- data.table::rbindlist(out)
-  out[, Variable := test.variables]
-  out <- out[, c("Variable", "Estimate", "Std. Error", "t value", "Pr(>|t|)"), with = FALSE]
+  out[, `:=`(Variable, test.variables)]
+    SSE <- data.table::rbindlist(SSE)
+  
+  out <- cbind(out, SSE)
+  
+  out <- out[, c("Variable", "Estimate", "Std. Error", "t value", "Pr(>|t|)", "SSE"), with = FALSE]
   out <- out[order(get(sort.var), decreasing = decreasing)]
   
   return(out[])
