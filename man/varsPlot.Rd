@@ -4,7 +4,7 @@
 \alias{varsPlot}
 \title{Plot multiple variables over time.}
 \usage{
-varsPlot(x, vars, date.index = "Week")
+varsPlot(x, vars, date.index = "Week", facet = FALSE)
 }
 \arguments{
 \item{x}{data.table}
@@ -12,6 +12,8 @@ varsPlot(x, vars, date.index = "Week")
 \item{vars}{Vector of characters - columns from x to be plotted.}
 
 \item{date.index}{Character. The column in x that is the date variable.}
+
+\item{facet}{TRUE = facets plot by variable, scales = "free_y".}
 }
 \description{
 Prints a ggplot of selected variables over time.
