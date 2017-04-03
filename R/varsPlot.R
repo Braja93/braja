@@ -2,7 +2,7 @@
 #'
 #' Prints a ggplot of selected variables over time.
 #' @param x data.table
-#' @param vars Vector of characters - columns from x to be plotted.
+#' @param vars Vector of characters - columns from x to be plotted. If left blank function plots all variables.
 #' @param date.index Character. The column in x that is the date variable.
 #' @param facet TRUE = facets plot by variable, scales = "free_y".
 #' @keywords variables plot
@@ -11,6 +11,9 @@
 #' @export
 
 varsPlot <- function (x, vars, date.index = "Week", facet = FALSE) {
+  
+  if(missing(vars)) { vars <- setdiff(names(x), date.index)}
+  
   vars <- c(date.index, vars)
   options(warn = -1)
   meltplot <- melt(x[, vars, with = FALSE], id.vars = date.index, verbose = FALSE)

@@ -9,7 +9,7 @@ varsPlot(x, vars, date.index = "Week", facet = FALSE)
 \arguments{
 \item{x}{data.table}
 
-\item{vars}{Vector of characters - columns from x to be plotted.}
+\item{vars}{Vector of characters - columns from x to be plotted. If left blank function plots all variables.}
 
 \item{date.index}{Character. The column in x that is the date variable.}
 
