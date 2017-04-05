@@ -32,7 +32,7 @@ writeModelToCSV <- function(lm.nladwa.object, filename, date.index = "Week"){
                       r2 = summary(lm.nladwa.object$lm.object)$r.squared,
                       adj.r2 = summary(lm.nladwa.object$lm.object)$adj.r.squared)
     
-    if(grep(x = dep.var, pattern = "\\.Train$")) {
+    if(grepl(x = dep.var, pattern = "\\.Train$")) {
       
       temp1 <- MAPE.trainAndTest(lm.nladwa.object$lm.trainAndTest)
       temp1[, Index := .I]
