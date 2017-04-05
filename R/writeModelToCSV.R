@@ -29,8 +29,8 @@ writeModelToCSV <- function(lm.nladwa.object, filename, date.index = "Week"){
     dep.var <- as.character(lm.nladwa.object$formula[[2]])
     
     out <- data.table(Model = dep.var, 
-                      r2 = summary(lm.nladwa.object$lm.object)$r.squared,
-                      adj.r2 = summary(lm.nladwa.object$lm.object)$adj.r.squared)
+                      RSquared = summary(lm.nladwa.object$lm.object)$r.squared,
+                      Adjusted.RSquared = summary(lm.nladwa.object$lm.object)$adj.r.squared)
     
     if(grepl(x = dep.var, pattern = "\\.Train$")) {
       
